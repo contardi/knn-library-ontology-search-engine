@@ -27,7 +27,7 @@ A semantic web-based library search engine that uses OWL ontologies and SPARQL q
 1. **Clone the repository**
    ```bash
    git clone https://github.com/contardi/knn-library-ontology-search-engine.git
-   cd protege
+   cd knn-library-ontology-search-engine
    ```
 
 2. **Build the Docker image**
