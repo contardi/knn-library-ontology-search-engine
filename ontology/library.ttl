@@ -1,0 +1,307 @@
+@prefix lib: <http://example.org/library#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/library> a owl:Ontology ;
+    rdfs:label "Community Library Ontology" ;
+    rdfs:comment "An ontology for a community library search engine" .
+
+lib:Adult a lib:AgeGroup,
+        owl:NamedIndividual ;
+    rdfs:label "Adult (18+)" ;
+    lib:hasAgeGroupName "Adult (18+)" ;
+    lib:hasMaxAge 99 ;
+    lib:hasMinAge 18 .
+
+lib:AdventureInstance a lib:Adventure,
+        owl:NamedIndividual ;
+    rdfs:label "Adventure" .
+
+lib:ArtsInstance a lib:Arts,
+        owl:NamedIndividual ;
+    rdfs:label "Arts" .
+
+lib:AudioBook a lib:Format,
+        owl:NamedIndividual ;
+    rdfs:label "AudioBook" .
+
+lib:Available a lib:AvailabilityStatus,
+        owl:NamedIndividual ;
+    rdfs:label "Available" .
+
+lib:Biography a owl:Class ;
+    rdfs:subClassOf lib:NonFictionBook .
+
+lib:BiographyGenre a owl:Class ;
+    rdfs:subClassOf lib:NonFictionGenre .
+
+lib:CheckedOut a lib:AvailabilityStatus,
+        owl:NamedIndividual ;
+    rdfs:label "CheckedOut" .
+
+lib:Children a lib:AgeGroup,
+        owl:NamedIndividual ;
+    rdfs:label "Children (6-8)" ;
+    lib:hasAgeGroupName "Children (6-8)" ;
+    lib:hasMaxAge 8 ;
+    lib:hasMinAge 6 .
+
+lib:EBook a lib:Format,
+        owl:NamedIndividual ;
+    rdfs:label "EBook" .
+
+lib:EarlyChildhood a lib:AgeGroup,
+        owl:NamedIndividual ;
+    rdfs:label "Early Childhood (0-5)" ;
+    lib:hasAgeGroupName "Early Childhood (0-5)" ;
+    lib:hasMaxAge 5 ;
+    lib:hasMinAge 0 .
+
+lib:Educational a owl:Class ;
+    rdfs:subClassOf lib:NonFictionBook .
+
+lib:FantasyInstance a lib:Fantasy,
+        owl:NamedIndividual ;
+    rdfs:label "Fantasy" .
+
+lib:Hardcover a lib:Format,
+        owl:NamedIndividual ;
+    rdfs:label "Hardcover" .
+
+lib:HistoricalFictionInstance a lib:HistoricalFiction,
+        owl:NamedIndividual ;
+    rdfs:label "HistoricalFiction" .
+
+lib:HistoryInstance a lib:History,
+        owl:NamedIndividual ;
+    rdfs:label "History" .
+
+lib:HorrorInstance a lib:Horror,
+        owl:NamedIndividual ;
+    rdfs:label "Horror" .
+
+lib:MiddleGrade a lib:AgeGroup,
+        owl:NamedIndividual ;
+    rdfs:label "Middle Grade (9-12)" ;
+    lib:hasAgeGroupName "Middle Grade (9-12)" ;
+    lib:hasMaxAge 12 ;
+    lib:hasMinAge 9 .
+
+lib:MysteryInstance a lib:Mystery,
+        owl:NamedIndividual ;
+    rdfs:label "Mystery" .
+
+lib:NatureInstance a lib:Nature,
+        owl:NamedIndividual ;
+    rdfs:label "Nature" .
+
+lib:Novel a owl:Class ;
+    rdfs:subClassOf lib:FictionBook .
+
+lib:Paperback a lib:Format,
+        owl:NamedIndividual ;
+    rdfs:label "Paperback" .
+
+lib:PhilosophyInstance a lib:Philosophy,
+        owl:NamedIndividual ;
+    rdfs:label "Philosophy" .
+
+lib:Poetry a owl:Class ;
+    rdfs:subClassOf lib:FictionBook .
+
+lib:Reference a owl:Class ;
+    rdfs:subClassOf lib:NonFictionBook .
+
+lib:Reserved a lib:AvailabilityStatus,
+        owl:NamedIndividual ;
+    rdfs:label "Reserved" .
+
+lib:RomanceInstance a lib:Romance,
+        owl:NamedIndividual ;
+    rdfs:label "Romance" .
+
+lib:ScienceFictionInstance a lib:ScienceFiction,
+        owl:NamedIndividual ;
+    rdfs:label "ScienceFiction" .
+
+lib:ScienceInstance a lib:Science,
+        owl:NamedIndividual ;
+    rdfs:label "Science" .
+
+lib:SelfHelp a owl:Class ;
+    rdfs:subClassOf lib:NonFictionBook .
+
+lib:ShortStoryCollection a owl:Class ;
+    rdfs:subClassOf lib:FictionBook .
+
+lib:SportsInstance a lib:Sports,
+        owl:NamedIndividual ;
+    rdfs:label "Sports" .
+
+lib:TechnologyInstance a lib:Technology,
+        owl:NamedIndividual ;
+    rdfs:label "Technology" .
+
+lib:ThrillerInstance a lib:Thriller,
+        owl:NamedIndividual ;
+    rdfs:label "Thriller" .
+
+lib:YoungAdult a lib:AgeGroup,
+        owl:NamedIndividual ;
+    rdfs:label "Young Adult (13-17)" ;
+    lib:hasAgeGroupName "Young Adult (13-17)" ;
+    lib:hasMaxAge 17 ;
+    lib:hasMinAge 13 .
+
+lib:forAgeGroup a owl:ObjectProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range lib:AgeGroup .
+
+lib:hasAgeGroupName a owl:DatatypeProperty ;
+    rdfs:domain lib:AgeGroup ;
+    rdfs:range xsd:string .
+
+lib:hasAuthor a owl:ObjectProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range lib:Author .
+
+lib:hasAuthorName a owl:DatatypeProperty ;
+    rdfs:domain lib:Author ;
+    rdfs:range xsd:string .
+
+lib:hasBirthYear a owl:DatatypeProperty ;
+    rdfs:domain lib:Author ;
+    rdfs:range xsd:integer .
+
+lib:hasDescription a owl:DatatypeProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range xsd:string .
+
+lib:hasFormat a owl:ObjectProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range lib:Format .
+
+lib:hasGenre a owl:ObjectProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range lib:Genre .
+
+lib:hasISBN a owl:DatatypeProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range xsd:string .
+
+lib:hasMaxAge a owl:DatatypeProperty ;
+    rdfs:domain lib:AgeGroup ;
+    rdfs:range xsd:integer .
+
+lib:hasMinAge a owl:DatatypeProperty ;
+    rdfs:domain lib:AgeGroup ;
+    rdfs:range xsd:integer .
+
+lib:hasNationality a owl:DatatypeProperty ;
+    rdfs:domain lib:Author ;
+    rdfs:range xsd:string .
+
+lib:hasPageCount a owl:DatatypeProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range xsd:integer .
+
+lib:hasPublicationYear a owl:DatatypeProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range xsd:integer .
+
+lib:hasStatus a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range lib:AvailabilityStatus .
+
+lib:hasTitle a owl:DatatypeProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range xsd:string .
+
+lib:relatedTo a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range lib:Book .
+
+lib:writtenBy a owl:ObjectProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range lib:Author ;
+    owl:inverseOf lib:authorOf .
+
+lib:Adventure a owl:Class ;
+    rdfs:subClassOf lib:FictionGenre .
+
+lib:Arts a owl:Class ;
+    rdfs:subClassOf lib:NonFictionGenre .
+
+lib:Fantasy a owl:Class ;
+    rdfs:subClassOf lib:FictionGenre .
+
+lib:HistoricalFiction a owl:Class ;
+    rdfs:subClassOf lib:FictionGenre .
+
+lib:History a owl:Class ;
+    rdfs:subClassOf lib:NonFictionGenre .
+
+lib:Horror a owl:Class ;
+    rdfs:subClassOf lib:FictionGenre .
+
+lib:Mystery a owl:Class ;
+    rdfs:subClassOf lib:FictionGenre .
+
+lib:Nature a owl:Class ;
+    rdfs:subClassOf lib:NonFictionGenre .
+
+lib:Person a owl:Class .
+
+lib:Philosophy a owl:Class ;
+    rdfs:subClassOf lib:NonFictionGenre .
+
+lib:Romance a owl:Class ;
+    rdfs:subClassOf lib:FictionGenre .
+
+lib:Science a owl:Class ;
+    rdfs:subClassOf lib:NonFictionGenre .
+
+lib:ScienceFiction a owl:Class ;
+    rdfs:subClassOf lib:FictionGenre .
+
+lib:Sports a owl:Class ;
+    rdfs:subClassOf lib:NonFictionGenre .
+
+lib:Technology a owl:Class ;
+    rdfs:subClassOf lib:NonFictionGenre .
+
+lib:Thriller a owl:Class ;
+    rdfs:subClassOf lib:FictionGenre .
+
+lib:authorOf a owl:ObjectProperty ;
+    rdfs:domain lib:Author ;
+    rdfs:range lib:Book .
+
+lib:FictionBook a owl:Class ;
+    rdfs:subClassOf lib:Book .
+
+lib:Genre a owl:Class .
+
+lib:AvailabilityStatus a owl:Class .
+
+lib:NonFictionBook a owl:Class ;
+    rdfs:subClassOf lib:Book .
+
+lib:Format a owl:Class .
+
+lib:Author a owl:Class ;
+    rdfs:subClassOf lib:Person .
+
+lib:FictionGenre a owl:Class ;
+    rdfs:subClassOf lib:Genre .
+
+lib:NonFictionGenre a owl:Class ;
+    rdfs:subClassOf lib:Genre .
+
+lib:AgeGroup a owl:Class .
+
+lib:Book a owl:Class .
+

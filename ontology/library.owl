@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:lib="http://example.org/library#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/library#AudioBook">
+    <rdf:type rdf:resource="http://example.org/library#Format"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>AudioBook</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#MiddleGrade">
+    <rdf:type rdf:resource="http://example.org/library#AgeGroup"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasMinAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</lib:hasMinAge>
+    <lib:hasMaxAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</lib:hasMaxAge>
+    <lib:hasAgeGroupName>Middle Grade (9-12)</lib:hasAgeGroupName>
+    <rdfs:label>Middle Grade (9-12)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#ScienceInstance">
+    <rdf:type rdf:resource="http://example.org/library#Science"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Science</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Adult">
+    <rdf:type rdf:resource="http://example.org/library#AgeGroup"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasMinAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</lib:hasMinAge>
+    <lib:hasMaxAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</lib:hasMaxAge>
+    <lib:hasAgeGroupName>Adult (18+)</lib:hasAgeGroupName>
+    <rdfs:label>Adult (18+)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Adventure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Poetry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionBook"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#AdventureInstance">
+    <rdf:type rdf:resource="http://example.org/library#Adventure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Adventure</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#FictionBook">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#Book"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#AvailabilityStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#ThrillerInstance">
+    <rdf:type rdf:resource="http://example.org/library#Thriller"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Thriller</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Romance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#SelfHelp">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionBook"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#FantasyInstance">
+    <rdf:type rdf:resource="http://example.org/library#Fantasy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Fantasy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#NonFictionBook">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#Book"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#relatedTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://example.org/library#Book"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasPublicationYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#History">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#authorOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Author"/>
+    <rdfs:range rdf:resource="http://example.org/library#Book"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#HistoricalFictionInstance">
+    <rdf:type rdf:resource="http://example.org/library#HistoricalFiction"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>HistoricalFiction</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#PhilosophyInstance">
+    <rdf:type rdf:resource="http://example.org/library#Philosophy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Philosophy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasPageCount">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Fantasy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Thriller">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Genre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasAuthorName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Author"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#CheckedOut">
+    <rdf:type rdf:resource="http://example.org/library#AvailabilityStatus"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>CheckedOut</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#ScienceFiction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#forAgeGroup">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://example.org/library#AgeGroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Hardcover">
+    <rdf:type rdf:resource="http://example.org/library#Format"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Hardcover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Sports">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasISBN">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label>Community Library Ontology</rdfs:label>
+    <rdfs:comment>An ontology for a community library search engine</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#NonFictionGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#Genre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Mystery">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasAgeGroupName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#AgeGroup"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Available">
+    <rdf:type rdf:resource="http://example.org/library#AvailabilityStatus"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Available</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#ScienceFictionInstance">
+    <rdf:type rdf:resource="http://example.org/library#ScienceFiction"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>ScienceFiction</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasTitle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#ArtsInstance">
+    <rdf:type rdf:resource="http://example.org/library#Arts"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Arts</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasMinAge">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#AgeGroup"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Paperback">
+    <rdf:type rdf:resource="http://example.org/library#Format"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Paperback</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#HistoryInstance">
+    <rdf:type rdf:resource="http://example.org/library#History"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>History</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasBirthYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Author"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#EarlyChildhood">
+    <rdf:type rdf:resource="http://example.org/library#AgeGroup"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasMinAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</lib:hasMinAge>
+    <lib:hasMaxAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</lib:hasMaxAge>
+    <lib:hasAgeGroupName>Early Childhood (0-5)</lib:hasAgeGroupName>
+    <rdfs:label>Early Childhood (0-5)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Philosophy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Horror">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Reserved">
+    <rdf:type rdf:resource="http://example.org/library#AvailabilityStatus"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Reserved</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#MysteryInstance">
+    <rdf:type rdf:resource="http://example.org/library#Mystery"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Mystery</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Novel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionBook"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#ShortStoryCollection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionBook"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://example.org/library#AvailabilityStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#AgeGroup">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#EBook">
+    <rdf:type rdf:resource="http://example.org/library#Format"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>EBook</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#HorrorInstance">
+    <rdf:type rdf:resource="http://example.org/library#Horror"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Horror</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Author">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Children">
+    <rdf:type rdf:resource="http://example.org/library#AgeGroup"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasMinAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</lib:hasMinAge>
+    <lib:hasMaxAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</lib:hasMaxAge>
+    <lib:hasAgeGroupName>Children (6-8)</lib:hasAgeGroupName>
+    <rdfs:label>Children (6-8)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasAuthor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://example.org/library#Author"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasMaxAge">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#AgeGroup"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Arts">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#SportsInstance">
+    <rdf:type rdf:resource="http://example.org/library#Sports"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Sports</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#FictionGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#Genre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#YoungAdult">
+    <rdf:type rdf:resource="http://example.org/library#AgeGroup"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasMinAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</lib:hasMinAge>
+    <lib:hasMaxAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</lib:hasMaxAge>
+    <lib:hasAgeGroupName>Young Adult (13-17)</lib:hasAgeGroupName>
+    <rdfs:label>Young Adult (13-17)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Reference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionBook"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://example.org/library#Genre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#writtenBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://example.org/library#Author"/>
+    <owl:inverseOf rdf:resource="http://example.org/library#authorOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#HistoricalFiction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasNationality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Author"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Educational">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionBook"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#NatureInstance">
+    <rdf:type rdf:resource="http://example.org/library#Nature"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Nature</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Book">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Science">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#BiographyGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Nature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#TechnologyInstance">
+    <rdf:type rdf:resource="http://example.org/library#Technology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Technology</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Technology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#RomanceInstance">
+    <rdf:type rdf:resource="http://example.org/library#Romance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Romance</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Biography">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionBook"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Format">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasFormat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://example.org/library#Format"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

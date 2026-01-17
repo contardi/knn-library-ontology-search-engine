@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %}Community Library - Search{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h1>Community Library Search</h1>
+    <p class="subtitle">Search our collection using natural language queries</p>
+</div>
+
+<div class="search-container">
+    <form action="{{ url_for('search') }}" method="get" class="search-form">
+        <div class="search-box">
+            <input
+                type="text"
+                name="q"
+                placeholder="Try: 'Fantasy books for children with 8 years old' or 'Mystery books for adults'"
+                class="search-input"
+                autofocus
+            >
+            <button type="submit" class="search-button">Search</button>
+        </div>
+    </form>
+
+    <div class="search-examples">
+        <p><strong>Example searches:</strong></p>
+        <ul>
+            <li><a href="{{ url_for('search', q='Fantasy books for children') }}">Fantasy books for children</a></li>
+            <li><a href="{{ url_for('search', q='Science fiction for adults') }}">Science fiction for adults</a></li>
+            <li><a href="{{ url_for('search', q='Books for 8 year olds') }}">Books for 8 year olds</a></li>
+            <li><a href="{{ url_for('search', q='Mystery books') }}">Mystery books</a></li>
+            <li><a href="{{ url_for('search', q='Available books') }}">Available books</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="browse-section">
+    <h2>Browse by Category</h2>
+
+    <div class="browse-grid">
+        <div class="browse-card">
+            <h3>By Genre</h3>
+            <div class="genre-list">
+                <h4>Fiction</h4>
+                <ul>
+                    <li><a href="{{ url_for('browse_genre', genre='Fantasy') }}">Fantasy</a></li>
+                    <li><a href="{{ url_for('browse_genre', genre='Mystery') }}">Mystery</a></li>
+                    <li><a href="{{ url_for('browse_genre', genre='Romance') }}">Romance</a></li>
+                    <li><a href="{{ url_for('browse_genre', genre='ScienceFiction') }}">Science Fiction</a></li>
+                    <li><a href="{{ url_for('browse_genre', genre='Thriller') }}">Thriller</a></li>
+                    <li><a href="{{ url_for('browse_genre', genre='Horror') }}">Horror</a></li>
+                    <li><a href="{{ url_for('browse_genre', genre='HistoricalFiction') }}">Historical Fiction</a></li>
+                    <li><a href="{{ url_for('browse_genre', genre='Adventure') }}">Adventure</a></li>
+                </ul>
+                <h4>Non-Fiction</h4>
+                <ul>
+                    <li><a href="{{ url_for('browse_genre', genre='Science') }}">Science</a></li>
+                    <li><a href="{{ url_for('browse_genre', genre='History') }}">History</a></li>
+                    <li><a href="{{ url_for('browse_genre', genre='BiographyGenre') }}">Biography</a></li>
+                    <li><a href="{{ url_for('browse_genre', genre='Technology') }}">Technology</a></li>
+                    <li><a href="{{ url_for('browse_genre', genre='Philosophy') }}">Philosophy</a></li>
+                    <li><a href="{{ url_for('browse_genre', genre='Nature') }}">Nature</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="browse-card">
+            <h3>By Age Group</h3>
+            <ul class="age-list">
+                {% for age_id, age_name in age_groups %}
+                <li>
+                    <a href="{{ url_for('browse_age', age_group=age_id) }}">{{ age_name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="stats-section">
+    <h2>Library Statistics</h2>
+    <div class="stats-grid">
+        <div class="stat-card">
+            <span class="stat-number">{{ stats.total_books }}</span>
+            <span class="stat-label">Total Books</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">{{ stats.total_authors }}</span>
+            <span class="stat-label">Authors</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">{{ stats.available_books }}</span>
+            <span class="stat-label">Available Now</span>
+        </div>
+    </div>
+</div>
+
+<div class="about-section">
+    <h2>About This Search Engine</h2>
+    <p>This library search engine uses an <strong>OWL ontology</strong> to enable semantic search capabilities.
+    You can search using natural language queries, and the system will understand concepts like:</p>
+    <ul>
+        <li><strong>Age-appropriate filtering</strong>: "books for 8 year olds" finds books in the Children (6-8) age group</li>
+        <li><strong>Genre classification</strong>: "fantasy books" finds all fantasy genre books</li>
+        <li><strong>Combined queries</strong>: "Science fiction for young adults" combines genre and age group</li>
+        <li><strong>Availability</strong>: "available books" filters by status</li>
+    </ul>
+</div>
+{% endblock %}

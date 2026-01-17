@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}Search Results - {{ query }}{% endblock %}
+
+{% block content %}
+<div class="results-header">
+    <h1>Search Results</h1>
+    <p class="query-display">Query: <strong>{{ query }}</strong></p>
+
+    {% if params %}
+    <div class="parsed-params">
+        <p><em>Parsed search parameters:</em></p>
+        <ul>
+            {% if params.get('genre') %}
+            <li>Genre: {{ params.genre }}</li>
+            {% endif %}
+            {% if params.get('age_group') %}
+            <li>Age Group: {{ params.age_group }}</li>
+            {% endif %}
+            {% if params.get('age') %}
+            <li>Target Age: {{ params.age }} years old</li>
+            {% endif %}
+            {% if params.get('category') %}
+            <li>Category: {{ params.category | capitalize }}</li>
+            {% endif %}
+            {% if params.get('author') %}
+            <li>Author: {{ params.author }}</li>
+            {% endif %}
+            {% if params.get('status') %}
+            <li>Status: {{ params.status }}</li>
+            {% endif %}
+        </ul>
+    </div>
+    {% endif %}
+</div>
+
+<div class="search-again">
+    <form action="{{ url_for('search') }}" method="get" class="search-form-inline">
+        <input
+            type="text"
+            name="q"
+            value="{{ query if query and not query.startswith('Genre:') and not query.startswith('Age Group:') and not query.startswith('All') else '' }}"
+            placeholder="Search again..."
+            class="search-input-small"
+        >
+        <button type="submit" class="search-button-small">Search</button>
+    </form>
+</div>
+
+{% if message %}
+<div class="message">
+    <p>{{ message }}</p>
+    <p><a href="{{ url_for('index') }}">Return to search</a></p>
+</div>
+{% endif %}
+
+{% if results %}
+<div class="results-count">
+    <p>Found <strong>{{ results | length }}</strong> book(s)</p>
+</div>
+
+<div class="results-grid">
+    {% for book in results %}
+    <div class="book-card">
+        <div class="book-header">
+            <h3 class="book-title">{{ book.title }}</h3>
+            <span class="book-status status-{{ book.status | lower | replace(' ', '-') }}">
+                {{ book.status }}
+            </span>
+        </div>
+
+        <div class="book-meta">
+            <p class="book-author">
+                <strong>Author:</strong> {{ book.author }}
+            </p>
+            {% if book.year %}
+            <p class="book-year">
+                <strong>Year:</strong> {{ book.year }}
+            </p>
+            {% endif %}
+            {% if book.genre %}
+            <p class="book-genre">
+                <strong>Genre:</strong> {{ book.genre }}
+            </p>
+            {% endif %}
+            {% if book.age_group %}
+            <p class="book-age">
+                <strong>Age Group:</strong> {{ book.age_group }}
+            </p>
+            {% endif %}
+        </div>
+
+        {% if book.description %}
+        <div class="book-description">
+            <p>{{ book.description[:200] }}{% if book.description | length > 200 %}...{% endif %}</p>
+        </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<div class="back-link">
+    <a href="{{ url_for('index') }}">&larr; Back to Search</a>
+</div>
+{% endblock %}

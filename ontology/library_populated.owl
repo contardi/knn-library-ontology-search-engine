@@ -1,0 +1,2664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:lib="http://example.org/library#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/library#Neuromancer">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Neuromancer</lib:hasTitle>
+    <rdfs:label>Neuromancer</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1984</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">271</lib:hasPageCount>
+    <lib:hasDescription>A washed-up hacker is hired for the ultimate hack in cyberspace.</lib:hasDescription>
+    <lib:hasISBN>978-0-1984-9719-1</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#WilliamGibson"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ScienceFictionInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#DiaryWimpyKid1">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Diary of a Wimpy Kid</lib:hasTitle>
+    <rdfs:label>Diary of a Wimpy Kid</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">217</lib:hasPageCount>
+    <lib:hasDescription>Greg Heffley chronicles his attempts to survive middle school.</lib:hasDescription>
+    <lib:hasISBN>978-0-2007-7410-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#JeffKinney"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#AdventureInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Reserved"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#JRRTolkien">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>J.R.R. Tolkien</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1892</lib:hasBirthYear>
+    <lib:hasNationality>British</lib:hasNationality>
+    <rdfs:label>J.R.R. Tolkien</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#WalterIsaacson">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Walter Isaacson</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1952</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Walter Isaacson</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#FaultInStars">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Fault in Our Stars</lib:hasTitle>
+    <rdfs:label>The Fault in Our Stars</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">313</lib:hasPageCount>
+    <lib:hasDescription>Two teenagers with cancer fall in love at a support group.</lib:hasDescription>
+    <lib:hasISBN>978-0-2012-5700-2</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#JohnGreen"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#RomanceInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#YoungAdult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#CheckedOut"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#WingsOfFire1">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Wings of Fire: The Dragonet Prophecy</lib:hasTitle>
+    <rdfs:label>Wings of Fire: The Dragonet Prophecy</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">336</lib:hasPageCount>
+    <lib:hasDescription>Five young dragons are destined to end a war, but first they must escape.</lib:hasDescription>
+    <lib:hasISBN>978-0-2012-4639-6</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#TuiTSutherland"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#DogMan1">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Dog Man</lib:hasTitle>
+    <rdfs:label>Dog Man</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">224</lib:hasPageCount>
+    <lib:hasDescription>A cop and his police dog become one superhero.</lib:hasDescription>
+    <lib:hasISBN>978-0-2016-8616-7</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#DavPilkey"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#AdventureInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Becoming">
+    <rdf:type rdf:resource="http://example.org/library#Biography"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Becoming</lib:hasTitle>
+    <rdfs:label>Becoming</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">448</lib:hasPageCount>
+    <lib:hasDescription>Michelle Obama's memoir about her journey to the White House.</lib:hasDescription>
+    <lib:hasISBN>978-0-2018-5438-8</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#MichelleObama"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#BiographyGenreInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#CheckedOut"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#AvailabilityStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Outliers">
+    <rdf:type rdf:resource="http://example.org/library#NonFictionBook"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Outliers: The Story of Success</lib:hasTitle>
+    <rdfs:label>Outliers: The Story of Success</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">309</lib:hasPageCount>
+    <lib:hasDescription>An examination of what makes high achievers different.</lib:hasDescription>
+    <lib:hasISBN>978-0-2008-1449-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#MalcolmGladwell"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#TechnologyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#NatGeoKidsOceans">
+    <rdf:type rdf:resource="http://example.org/library#Educational"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>National Geographic Kids: Ocean Animals</lib:hasTitle>
+    <rdfs:label>National Geographic Kids: Ocean Animals</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">128</lib:hasPageCount>
+    <lib:hasDescription>A colorful guide to ocean creatures for young readers.</lib:hasDescription>
+    <lib:hasISBN>978-0-2016-7726-9</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#NatGeoKids"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#NatureInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#PerksWallflower">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Perks of Being a Wallflower</lib:hasTitle>
+    <rdfs:label>The Perks of Being a Wallflower</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1999</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">213</lib:hasPageCount>
+    <lib:hasDescription>A shy freshman navigates high school, friendship, and first love.</lib:hasDescription>
+    <lib:hasISBN>978-0-1999-0883-1</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#StephenChbosky"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#RomanceInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#YoungAdult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#NumberStars">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Number the Stars</lib:hasTitle>
+    <rdfs:label>Number the Stars</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1989</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">137</lib:hasPageCount>
+    <lib:hasDescription>A Danish girl helps her Jewish friend escape the Nazis during World War II.</lib:hasDescription>
+    <lib:hasISBN>978-0-1989-1320-6</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#LoisLowry"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#HistoricalFictionInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#RamonaQuimby">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Ramona Quimby, Age 8</lib:hasTitle>
+    <rdfs:label>Ramona Quimby, Age 8</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1981</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">190</lib:hasPageCount>
+    <lib:hasDescription>Ramona navigates the challenges of third grade and family life.</lib:hasDescription>
+    <lib:hasISBN>978-0-1981-3183-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#BeverleyCleary"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#AdventureInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#JKRowling">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>J.K. Rowling</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1965</lib:hasBirthYear>
+    <lib:hasNationality>British</lib:hasNationality>
+    <rdfs:label>J.K. Rowling</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#JamesGiantPeach">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>James and the Giant Peach</lib:hasTitle>
+    <rdfs:label>James and the Giant Peach</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1961</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</lib:hasPageCount>
+    <lib:hasDescription>James escapes his cruel aunts inside a magical giant peach with insect friends.</lib:hasDescription>
+    <lib:hasISBN>978-0-1961-2036-5</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#RoaldDahl"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#BFG">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The BFG</lib:hasTitle>
+    <rdfs:label>The BFG</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1982</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">208</lib:hasPageCount>
+    <lib:hasDescription>Sophie befriends the Big Friendly Giant who catches dreams.</lib:hasDescription>
+    <lib:hasISBN>978-0-1982-6128-7</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#RoaldDahl"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#CaptainUnderpants1">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Captain Underpants and the Perilous Plot</lib:hasTitle>
+    <rdfs:label>Captain Underpants and the Perilous Plot</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1997</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">128</lib:hasPageCount>
+    <lib:hasDescription>Two pranksters accidentally hypnotize their principal into becoming a superhero.</lib:hasDescription>
+    <lib:hasISBN>978-0-1997-8901-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#DavPilkey"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#AdventureInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#DrSeuss">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Dr. Seuss</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1904</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Dr. Seuss</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#ArtsInstance">
+    <rdf:type rdf:resource="http://example.org/library#Arts"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Arts</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#LordRings2">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Two Towers</lib:hasTitle>
+    <rdfs:label>The Two Towers</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1954</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">352</lib:hasPageCount>
+    <lib:hasDescription>The fellowship is broken as war spreads across Middle-earth.</lib:hasDescription>
+    <lib:hasISBN>978-0-1954-3084-4</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#JRRTolkien"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#RedwallBook">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Redwall</lib:hasTitle>
+    <rdfs:label>Redwall</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1986</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">351</lib:hasPageCount>
+    <lib:hasDescription>A young mouse must defend Redwall Abbey from the evil rat Cluny the Scourge.</lib:hasDescription>
+    <lib:hasISBN>978-0-1986-1954-7</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#BrianJacques"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#LordRings3">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Return of the King</lib:hasTitle>
+    <rdfs:label>The Return of the King</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1955</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">416</lib:hasPageCount>
+    <lib:hasDescription>The final battle for Middle-earth and the fate of the Ring.</lib:hasDescription>
+    <lib:hasISBN>978-0-1955-0520-2</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#JRRTolkien"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Reserved"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#EBWhite">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>E.B. White</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1899</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>E.B. White</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#NarniaLion">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Lion, the Witch and the Wardrobe</lib:hasTitle>
+    <rdfs:label>The Lion, the Witch and the Wardrobe</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1950</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">208</lib:hasPageCount>
+    <lib:hasDescription>Four siblings discover a magical land through a wardrobe and help defeat the White Witch.</lib:hasDescription>
+    <lib:hasISBN>978-0-1950-8699-6</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#CSLewis"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#NeverendingStory">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Neverending Story</lib:hasTitle>
+    <rdfs:label>The Neverending Story</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1979</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">396</lib:hasPageCount>
+    <lib:hasDescription>A boy discovers a magical book that pulls him into its story.</lib:hasDescription>
+    <lib:hasISBN>978-0-1979-0166-1</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#MichaelEnde"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#GameThrones">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>A Game of Thrones</lib:hasTitle>
+    <rdfs:label>A Game of Thrones</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1996</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">694</lib:hasPageCount>
+    <lib:hasDescription>Noble families vie for control of the Iron Throne in a medieval fantasy world.</lib:hasDescription>
+    <lib:hasISBN>978-0-1996-7618-7</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#GeorgeRRMartin"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#GoodNightMoon">
+    <rdf:type rdf:resource="http://example.org/library#FictionBook"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Goodnight Moon</lib:hasTitle>
+    <rdfs:label>Goodnight Moon</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1947</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</lib:hasPageCount>
+    <lib:hasDescription>A bunny says goodnight to everything around him in a great green room.</lib:hasDescription>
+    <lib:hasISBN>978-0-1947-7918-4</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#MauriceSendak"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#EarlyChildhood"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#SuzanneCollins">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Suzanne Collins</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1962</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Suzanne Collins</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#GirlDragonTattoo">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Girl with the Dragon Tattoo</lib:hasTitle>
+    <rdfs:label>The Girl with the Dragon Tattoo</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">465</lib:hasPageCount>
+    <lib:hasDescription>A journalist and hacker investigate a decades-old disappearance.</lib:hasDescription>
+    <lib:hasISBN>978-0-2005-1733-1</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#StiegLarsson"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ThrillerInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#AmericanGods">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>American Gods</lib:hasTitle>
+    <rdfs:label>American Gods</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">541</lib:hasPageCount>
+    <lib:hasDescription>A man becomes embroiled in a war between old gods and new in America.</lib:hasDescription>
+    <lib:hasISBN>978-0-2001-0431-3</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#NeilGaiman"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#YoungAdult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#forAgeGroup">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://example.org/library#AgeGroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#HowlMovingCastle">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Howl's Moving Castle</lib:hasTitle>
+    <rdfs:label>Howl's Moving Castle</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1986</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">336</lib:hasPageCount>
+    <lib:hasDescription>Sophie is cursed to become an old woman and seeks help from the wizard Howl.</lib:hasDescription>
+    <lib:hasISBN>978-0-1986-2186-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#DianneWynneJones"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#EndersGame">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Ender's Game</lib:hasTitle>
+    <rdfs:label>Ender's Game</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1985</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">324</lib:hasPageCount>
+    <lib:hasDescription>A genius child is trained in a military academy to fight an alien threat.</lib:hasDescription>
+    <lib:hasISBN>978-0-1985-9739-2</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#OrsonScottCard"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ScienceFictionInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#YoungAdult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Hobbit">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Hobbit</lib:hasTitle>
+    <rdfs:label>The Hobbit</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1937</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">310</lib:hasPageCount>
+    <lib:hasDescription>Bilbo Baggins joins a quest to reclaim a dwarven kingdom from a dragon.</lib:hasDescription>
+    <lib:hasISBN>978-0-1937-5579-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#JRRTolkien"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#EllaCinder">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Ella Enchanted</lib:hasTitle>
+    <rdfs:label>Ella Enchanted</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1997</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">232</lib:hasPageCount>
+    <lib:hasDescription>A retelling of Cinderella where Ella is cursed to obey any command given to her.</lib:hasDescription>
+    <lib:hasISBN>978-0-1997-5723-4</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#GailCarsonLevine"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#IAmMalala">
+    <rdf:type rdf:resource="http://example.org/library#Biography"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>I Am Malala: Young Readers Edition</lib:hasTitle>
+    <rdfs:label>I Am Malala: Young Readers Edition</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</lib:hasPageCount>
+    <lib:hasDescription>Malala's story of standing up for girls' education.</lib:hasDescription>
+    <lib:hasISBN>978-0-2014-9851-4</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#MalalaYousafzai"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#BiographyGenreInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#GailCarsonLevine">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Gail Carson Levine</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1947</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Gail Carson Levine</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#LoisLowry">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Lois Lowry</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1937</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Lois Lowry</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#SilenceOfLambs">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Silence of the Lambs</lib:hasTitle>
+    <rdfs:label>The Silence of the Lambs</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1988</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">352</lib:hasPageCount>
+    <lib:hasDescription>An FBI trainee seeks help from an imprisoned cannibal to catch a serial killer.</lib:hasDescription>
+    <lib:hasISBN>978-0-1988-8919-4</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#ThomasHarris"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ThrillerInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#MadeleineEngle">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Madeleine L'Engle</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1918</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Madeleine L'Engle</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Reference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionBook"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Paperback">
+    <rdf:type rdf:resource="http://example.org/library#Format"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Paperback</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Mistborn1">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Mistborn: The Final Empire</lib:hasTitle>
+    <rdfs:label>Mistborn: The Final Empire</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">541</lib:hasPageCount>
+    <lib:hasDescription>A street thief with special powers joins a rebellion against a tyrannical immortal ruler.</lib:hasDescription>
+    <lib:hasISBN>978-0-2006-0125-6</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#BrandonSanderson"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#YoungAdult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#TrumpetSwan">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Trumpet of the Swan</lib:hasTitle>
+    <rdfs:label>The Trumpet of the Swan</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">252</lib:hasPageCount>
+    <lib:hasDescription>A voiceless trumpeter swan learns to play a trumpet to win the love of a female swan.</lib:hasDescription>
+    <lib:hasISBN>978-0-1970-4633-3</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#EBWhite"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#MysteryInstance">
+    <rdf:type rdf:resource="http://example.org/library#Mystery"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Mystery</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#1984Book">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>1984</lib:hasTitle>
+    <rdfs:label>1984</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1949</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">328</lib:hasPageCount>
+    <lib:hasDescription>Winston Smith struggles against a totalitarian regime that controls all aspects of life.</lib:hasDescription>
+    <lib:hasISBN>978-0-1949-2021-4</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#GeorgeOrwell"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ScienceFictionInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#DaVinciCode">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Da Vinci Code</lib:hasTitle>
+    <rdfs:label>The Da Vinci Code</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2003</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">454</lib:hasPageCount>
+    <lib:hasDescription>A professor unravels a murder mystery involving religious secrets.</lib:hasDescription>
+    <lib:hasISBN>978-0-2003-5695-7</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#DanBrown"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ThrillerInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#HolesBook">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Holes</lib:hasTitle>
+    <rdfs:label>Holes</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1998</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">233</lib:hasPageCount>
+    <lib:hasDescription>Stanley Yelnats is sent to a boys' camp where he must dig holes every day.</lib:hasDescription>
+    <lib:hasISBN>978-0-1998-8080-5</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#LouisSachar"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#AdventureInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Reserved"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#MauriceSendak">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Maurice Sendak</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1928</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Maurice Sendak</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#ShannonHale">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Shannon Hale</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Shannon Hale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#WayKings">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Way of Kings</lib:hasTitle>
+    <rdfs:label>The Way of Kings</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1007</lib:hasPageCount>
+    <lib:hasDescription>In a world of storms, an ancient power awakens.</lib:hasDescription>
+    <lib:hasISBN>978-0-2010-0794-6</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#BrandonSanderson"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#YoungAdult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#NeilGaiman">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Neil Gaiman</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1960</lib:hasBirthYear>
+    <lib:hasNationality>British</lib:hasNationality>
+    <rdfs:label>Neil Gaiman</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#HistoricalFictionInstance">
+    <rdf:type rdf:resource="http://example.org/library#HistoricalFiction"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>HistoricalFiction</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#GeorgeRRMartin">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>George R.R. Martin</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1948</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>George R.R. Martin</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Adult">
+    <rdf:type rdf:resource="http://example.org/library#AgeGroup"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasMinAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</lib:hasMinAge>
+    <lib:hasMaxAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</lib:hasMaxAge>
+    <lib:hasAgeGroupName>Adult (18+)</lib:hasAgeGroupName>
+    <rdfs:label>Adult (18+)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Reserved">
+    <rdf:type rdf:resource="http://example.org/library#AvailabilityStatus"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Reserved</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#StephenieMeyer">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Stephenie Meyer</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Stephenie Meyer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#KatherinePaterson">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Katherine Paterson</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1932</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Katherine Paterson</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#LeGuinWizard">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>A Wizard of Earthsea</lib:hasTitle>
+    <rdfs:label>A Wizard of Earthsea</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1968</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</lib:hasPageCount>
+    <lib:hasDescription>A young wizard must confront a shadow he released while learning magic.</lib:hasDescription>
+    <lib:hasISBN>978-0-1968-5234-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#UrsulaLeGuin"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#YoungAdult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#GoodOmens">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Good Omens</lib:hasTitle>
+    <rdfs:label>Good Omens</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1990</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">432</lib:hasPageCount>
+    <lib:hasDescription>An angel and demon team up to prevent the apocalypse.</lib:hasDescription>
+    <lib:hasISBN>978-0-1990-7409-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#NeilGaiman"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#YoungAdult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#CheckedOut"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#HopOnPop">
+    <rdf:type rdf:resource="http://example.org/library#FictionBook"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Hop on Pop</lib:hasTitle>
+    <rdfs:label>Hop on Pop</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1963</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</lib:hasPageCount>
+    <lib:hasDescription>A simple rhyming book for beginning readers.</lib:hasDescription>
+    <lib:hasISBN>978-0-1963-5131-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#DrSeuss"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#EarlyChildhood"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#JudyBlume">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Judy Blume</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1938</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Judy Blume</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#GillianFlynn">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Gillian Flynn</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Gillian Flynn</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#MurderOrientExpress">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Murder on the Orient Express</lib:hasTitle>
+    <rdfs:label>Murder on the Orient Express</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1934</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">256</lib:hasPageCount>
+    <lib:hasDescription>Detective Hercule Poirot investigates a murder on a snowbound train.</lib:hasDescription>
+    <lib:hasISBN>978-0-1934-6880-8</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#AgathaChristie"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#MysteryInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#CheckedOut"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Matilda">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Matilda</lib:hasTitle>
+    <rdfs:label>Matilda</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1988</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</lib:hasPageCount>
+    <lib:hasDescription>A brilliant young girl with telekinetic powers stands up to her mean headmistress.</lib:hasDescription>
+    <lib:hasISBN>978-0-1988-5861-7</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#RoaldDahl"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#MagicSchoolBus">
+    <rdf:type rdf:resource="http://example.org/library#Educational"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Magic School Bus Inside the Human Body</lib:hasTitle>
+    <rdfs:label>The Magic School Bus Inside the Human Body</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1989</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</lib:hasPageCount>
+    <lib:hasDescription>Ms. Frizzle's class shrinks down to explore the human body.</lib:hasDescription>
+    <lib:hasISBN>978-0-1989-3635-2</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#JoannaCole"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ScienceInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#GreenEggsHam">
+    <rdf:type rdf:resource="http://example.org/library#FictionBook"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Green Eggs and Ham</lib:hasTitle>
+    <rdfs:label>Green Eggs and Ham</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1960</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">62</lib:hasPageCount>
+    <lib:hasDescription>Sam-I-Am persistently tries to convince another character to try green eggs and ham.</lib:hasDescription>
+    <lib:hasISBN>978-0-1960-3751-8</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#DrSeuss"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#EarlyChildhood"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#BridgeTerabithia">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Bridge to Terabithia</lib:hasTitle>
+    <rdfs:label>Bridge to Terabithia</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1977</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">163</lib:hasPageCount>
+    <lib:hasDescription>Two outsiders create a magical kingdom in the woods called Terabithia.</lib:hasDescription>
+    <lib:hasISBN>978-0-1977-9670-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#KatherinePaterson"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#DuneBook">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Dune</lib:hasTitle>
+    <rdfs:label>Dune</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1965</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">412</lib:hasPageCount>
+    <lib:hasDescription>Paul Atreides must survive on a desert planet and fulfill a prophecy.</lib:hasDescription>
+    <lib:hasISBN>978-0-1965-6137-4</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#FrankHerbert"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ScienceFictionInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#OneFinshTwoFish">
+    <rdf:type rdf:resource="http://example.org/library#FictionBook"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>One Fish Two Fish Red Fish Blue Fish</lib:hasTitle>
+    <rdfs:label>One Fish Two Fish Red Fish Blue Fish</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1960</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">63</lib:hasPageCount>
+    <lib:hasDescription>A whimsical story about fish and other creatures in rhyming verse.</lib:hasDescription>
+    <lib:hasISBN>978-0-1960-5994-6</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#DrSeuss"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#EarlyChildhood"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#TheNotebook">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Notebook</lib:hasTitle>
+    <rdfs:label>The Notebook</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1996</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">214</lib:hasPageCount>
+    <lib:hasDescription>An elderly man reads a love story to a woman suffering from Alzheimer's.</lib:hasDescription>
+    <lib:hasISBN>978-0-1996-4675-2</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#NicholasSparks"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#RomanceInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Misery">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Misery</lib:hasTitle>
+    <rdfs:label>Misery</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1987</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">310</lib:hasPageCount>
+    <lib:hasDescription>An author is held captive by his number one fan.</lib:hasDescription>
+    <lib:hasISBN>978-0-1987-9605-6</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#StephenKing"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#HorrorInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#PhilipPullman">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Philip Pullman</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1946</lib:hasBirthYear>
+    <lib:hasNationality>British</lib:hasNationality>
+    <rdfs:label>Philip Pullman</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#TheFirm">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Firm</lib:hasTitle>
+    <rdfs:label>The Firm</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1991</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">421</lib:hasPageCount>
+    <lib:hasDescription>A young lawyer discovers his firm is involved with the mob.</lib:hasDescription>
+    <lib:hasISBN>978-0-1991-7663-8</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#JohnGrisham"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ThrillerInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#CarlSagan">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Carl Sagan</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1934</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Carl Sagan</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#SongAchilles">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Song of Achilles</lib:hasTitle>
+    <rdfs:label>The Song of Achilles</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">352</lib:hasPageCount>
+    <lib:hasDescription>A retelling of the Iliad through the eyes of Patroclus, companion to Achilles.</lib:hasDescription>
+    <lib:hasISBN>978-0-2011-5475-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#MadelineMiller"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#HistoricalFictionInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#YoungAdult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Reserved"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#PercyJackson2">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Percy Jackson and the Sea of Monsters</lib:hasTitle>
+    <rdfs:label>Percy Jackson and the Sea of Monsters</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">279</lib:hasPageCount>
+    <lib:hasDescription>Percy must find the Golden Fleece to save Camp Half-Blood.</lib:hasDescription>
+    <lib:hasISBN>978-0-2006-5972-7</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#RickRiordan"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Children">
+    <rdf:type rdf:resource="http://example.org/library#AgeGroup"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasMinAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</lib:hasMinAge>
+    <lib:hasMaxAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</lib:hasMaxAge>
+    <lib:hasAgeGroupName>Children (6-8)</lib:hasAgeGroupName>
+    <rdfs:label>Children (6-8)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#BadGuys1">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Bad Guys</lib:hasTitle>
+    <rdfs:label>The Bad Guys</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">144</lib:hasPageCount>
+    <lib:hasDescription>Villainous animals try to become heroes.</lib:hasDescription>
+    <lib:hasISBN>978-0-2015-2295-2</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#AaronBlabey"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#AdventureInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#FantasyInstance">
+    <rdf:type rdf:resource="http://example.org/library#Fantasy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Fantasy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#HorrorInstance">
+    <rdf:type rdf:resource="http://example.org/library#Horror"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Horror</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#InkhartBook">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Inkheart</lib:hasTitle>
+    <rdfs:label>Inkheart</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2003</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">534</lib:hasPageCount>
+    <lib:hasDescription>A father can bring book characters to life when he reads aloud.</lib:hasDescription>
+    <lib:hasISBN>978-0-2003-3425-8</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#CornelaFunke"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#VeronicaRoth">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Veronica Roth</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1988</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Veronica Roth</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasPublicationYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#GeorgeMarvelous">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>George's Marvelous Medicine</lib:hasTitle>
+    <rdfs:label>George's Marvelous Medicine</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1981</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</lib:hasPageCount>
+    <lib:hasDescription>George creates a magic medicine for his unpleasant grandmother.</lib:hasDescription>
+    <lib:hasISBN>978-0-1981-3160-7</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#RoaldDahl"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#RayBradbury">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Ray Bradbury</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1920</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Ray Bradbury</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Coraline">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Coraline</lib:hasTitle>
+    <rdfs:label>Coraline</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">162</lib:hasPageCount>
+    <lib:hasDescription>A girl discovers a parallel world where her Other Mother wants to keep her forever.</lib:hasDescription>
+    <lib:hasISBN>978-0-2002-7130-8</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#NeilGaiman"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#HorrorInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#CSLewis">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>C.S. Lewis</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1898</lib:hasBirthYear>
+    <lib:hasNationality>British</lib:hasNationality>
+    <rdfs:label>C.S. Lewis</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#WhoWasEinstein">
+    <rdf:type rdf:resource="http://example.org/library#Biography"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Who Was Albert Einstein?</lib:hasTitle>
+    <rdfs:label>Who Was Albert Einstein?</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</lib:hasPageCount>
+    <lib:hasDescription>A biography of Einstein written for young readers.</lib:hasDescription>
+    <lib:hasISBN>978-0-2002-1664-4</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#JessBrellier"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#BiographyGenreInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#JaneAusten">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Jane Austen</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1775</lib:hasBirthYear>
+    <lib:hasNationality>British</lib:hasNationality>
+    <rdfs:label>Jane Austen</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#VeryHungryCaterpillar">
+    <rdf:type rdf:resource="http://example.org/library#FictionBook"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Very Hungry Caterpillar</lib:hasTitle>
+    <rdfs:label>The Very Hungry Caterpillar</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</lib:hasPageCount>
+    <lib:hasDescription>A caterpillar eats through various foods before becoming a beautiful butterfly.</lib:hasDescription>
+    <lib:hasISBN>978-0-1969-6452-7</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#EricCarle"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#EarlyChildhood"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#GoneGirl">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Gone Girl</lib:hasTitle>
+    <rdfs:label>Gone Girl</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">432</lib:hasPageCount>
+    <lib:hasDescription>A woman disappears and her husband becomes the prime suspect.</lib:hasDescription>
+    <lib:hasISBN>978-0-2012-3000-9</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#GillianFlynn"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ThrillerInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Reserved"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#PercyJackson3">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Percy Jackson and the Titan's Curse</lib:hasTitle>
+    <rdfs:label>Percy Jackson and the Titan's Curse</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">312</lib:hasPageCount>
+    <lib:hasDescription>Percy must rescue the goddess Artemis and his friend Annabeth.</lib:hasDescription>
+    <lib:hasISBN>978-0-2007-1896-5</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#RickRiordan"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#RoaldDahl">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Roald Dahl</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1916</lib:hasBirthYear>
+    <lib:hasNationality>British</lib:hasNationality>
+    <rdfs:label>Roald Dahl</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#GeorgeOrwell">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>George Orwell</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1903</lib:hasBirthYear>
+    <lib:hasNationality>British</lib:hasNationality>
+    <rdfs:label>George Orwell</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#NameWind">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Name of the Wind</lib:hasTitle>
+    <rdfs:label>The Name of the Wind</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">662</lib:hasPageCount>
+    <lib:hasDescription>A legendary figure recounts his journey from orphaned boy to notorious wizard.</lib:hasDescription>
+    <lib:hasISBN>978-0-2007-1445-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#PatrickRothfuss"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#YoungAdult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Cosmos">
+    <rdf:type rdf:resource="http://example.org/library#NonFictionBook"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Cosmos</lib:hasTitle>
+    <rdfs:label>Cosmos</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1980</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">384</lib:hasPageCount>
+    <lib:hasDescription>A journey through the universe exploring science and civilization.</lib:hasDescription>
+    <lib:hasISBN>978-0-1980-7641-6</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#CarlSagan"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ScienceInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#relatedTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://example.org/library#Book"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#TwitsBook">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Twits</lib:hasTitle>
+    <rdfs:label>The Twits</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1980</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</lib:hasPageCount>
+    <lib:hasDescription>A nasty couple play mean tricks on each other and get their comeuppance.</lib:hasDescription>
+    <lib:hasISBN>978-0-1980-7391-9</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#RoaldDahl"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#CheckedOut"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#NatGeoKids">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>National Geographic Kids</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>National Geographic Kids</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Fablehaven1">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Fablehaven</lib:hasTitle>
+    <rdfs:label>Fablehaven</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">351</lib:hasPageCount>
+    <lib:hasDescription>Siblings discover their grandparents' estate is a secret preserve for magical creatures.</lib:hasDescription>
+    <lib:hasISBN>978-0-2006-9163-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#BrandonMull"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#CheckedOut"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#AnimalFarm">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Animal Farm</lib:hasTitle>
+    <rdfs:label>Animal Farm</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1945</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</lib:hasPageCount>
+    <lib:hasDescription>Animals overthrow their human farmer but the pigs become just as oppressive.</lib:hasDescription>
+    <lib:hasISBN>978-0-1945-9969-1</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#GeorgeOrwell"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ScienceFictionInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#GoldenCompass">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Golden Compass</lib:hasTitle>
+    <rdfs:label>The Golden Compass</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1995</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">399</lib:hasPageCount>
+    <lib:hasDescription>Lyra journeys to the Arctic to save kidnapped children and uncover a cosmic conspiracy.</lib:hasDescription>
+    <lib:hasISBN>978-0-1995-2769-8</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#PhilipPullman"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#YoungAdult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#LloydAlexander">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Lloyd Alexander</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1924</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Lloyd Alexander</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#LeighBardugo">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Leigh Bardugo</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Leigh Bardugo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#SteveJobs">
+    <rdf:type rdf:resource="http://example.org/library#Biography"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Steve Jobs</lib:hasTitle>
+    <rdfs:label>Steve Jobs</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">656</lib:hasPageCount>
+    <lib:hasDescription>The authorized biography of Apple co-founder Steve Jobs.</lib:hasDescription>
+    <lib:hasISBN>978-0-2011-4191-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#WalterIsaacson"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#BiographyGenreInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#NatGeoKidsSpace">
+    <rdf:type rdf:resource="http://example.org/library#Educational"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>National Geographic Kids: Space Encyclopedia</lib:hasTitle>
+    <rdfs:label>National Geographic Kids: Space Encyclopedia</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">192</lib:hasPageCount>
+    <lib:hasDescription>Everything kids want to know about space and the universe.</lib:hasDescription>
+    <lib:hasISBN>978-0-2013-6918-4</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#NatGeoKids"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ScienceInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#TraceaWest">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Tracey West</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1965</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Tracey West</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#LordRings1">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Fellowship of the Ring</lib:hasTitle>
+    <rdfs:label>The Fellowship of the Ring</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1954</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">423</lib:hasPageCount>
+    <lib:hasDescription>Frodo Baggins begins his quest to destroy the One Ring.</lib:hasDescription>
+    <lib:hasISBN>978-0-1954-4708-6</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#JRRTolkien"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#SixOfCrows">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Six of Crows</lib:hasTitle>
+    <rdfs:label>Six of Crows</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">465</lib:hasPageCount>
+    <lib:hasDescription>A crew of dangerous outcasts attempts an impossible heist in a fantasy world.</lib:hasDescription>
+    <lib:hasISBN>978-0-2015-8926-2</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#LeighBardugo"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#YoungAdult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#SmallGodsBook">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Small Gods</lib:hasTitle>
+    <rdfs:label>Small Gods</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1992</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">389</lib:hasPageCount>
+    <lib:hasDescription>A satirical fantasy about faith, religion, and the power of belief.</lib:hasDescription>
+    <lib:hasISBN>978-0-1992-8728-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#TerryPratchett"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#BeverleyCleary">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Beverly Cleary</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1916</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Beverly Cleary</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#ThomasHarris">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Thomas Harris</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1940</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Thomas Harris</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#HungerGames1">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Hunger Games</lib:hasTitle>
+    <rdfs:label>The Hunger Games</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">374</lib:hasPageCount>
+    <lib:hasDescription>Katniss volunteers for a televised fight to the death in a dystopian future.</lib:hasDescription>
+    <lib:hasISBN>978-0-2008-2285-6</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#SuzanneCollins"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ScienceFictionInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#YoungAdult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#CheckedOut"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#ScienceFiction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Twilight">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Twilight</lib:hasTitle>
+    <rdfs:label>Twilight</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">498</lib:hasPageCount>
+    <lib:hasDescription>Bella falls in love with a vampire in a small Washington town.</lib:hasDescription>
+    <lib:hasISBN>978-0-2005-8836-8</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#StephenieMeyer"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#RomanceInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#YoungAdult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#TomSawyer">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Adventures of Tom Sawyer</lib:hasTitle>
+    <rdfs:label>The Adventures of Tom Sawyer</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1876</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">274</lib:hasPageCount>
+    <lib:hasDescription>A mischievous boy has adventures along the Mississippi River.</lib:hasDescription>
+    <lib:hasISBN>978-0-1876-0894-8</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#MarkTwain"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#AdventureInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#CharlieChocolate">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Charlie and the Chocolate Factory</lib:hasTitle>
+    <rdfs:label>Charlie and the Chocolate Factory</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1964</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">192</lib:hasPageCount>
+    <lib:hasDescription>Charlie Bucket wins a tour of Willy Wonka's magical chocolate factory.</lib:hasDescription>
+    <lib:hasISBN>978-0-1964-7692-3</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#RoaldDahl"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#CheckedOut"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#LoraxBook">
+    <rdf:type rdf:resource="http://example.org/library#FictionBook"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Lorax</lib:hasTitle>
+    <rdfs:label>The Lorax</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72</lib:hasPageCount>
+    <lib:hasDescription>The Lorax speaks for the trees against the Once-ler's destruction.</lib:hasDescription>
+    <lib:hasISBN>978-0-1971-2119-9</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#DrSeuss"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#EarlyChildhood"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#DanBrown">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Dan Brown</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1964</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Dan Brown</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#FoundationBook">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Foundation</lib:hasTitle>
+    <rdfs:label>Foundation</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1951</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">296</lib:hasPageCount>
+    <lib:hasDescription>A mathematician predicts the fall of the Galactic Empire and works to preserve knowledge.</lib:hasDescription>
+    <lib:hasISBN>978-0-1951-1280-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#IsaacAsimov"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ScienceFictionInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#WimpyKid2">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Diary of a Wimpy Kid: Rodrick Rules</lib:hasTitle>
+    <rdfs:label>Diary of a Wimpy Kid: Rodrick Rules</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">217</lib:hasPageCount>
+    <lib:hasDescription>Greg's older brother makes his life miserable.</lib:hasDescription>
+    <lib:hasISBN>978-0-2008-0060-5</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#JeffKinney"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#AdventureInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#AgeGroup">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Hardcover">
+    <rdf:type rdf:resource="http://example.org/library#Format"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Hardcover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#HarryPotter4">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Harry Potter and the Goblet of Fire</lib:hasTitle>
+    <rdfs:label>Harry Potter and the Goblet of Fire</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">636</lib:hasPageCount>
+    <lib:hasDescription>Harry competes in the dangerous Triwizard Tournament.</lib:hasDescription>
+    <lib:hasISBN>978-0-2000-5869-5</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#JKRowling"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#FrankHerbert">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Frank Herbert</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1920</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Frank Herbert</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Available">
+    <rdf:type rdf:resource="http://example.org/library#AvailabilityStatus"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Available</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#AudioBook">
+    <rdf:type rdf:resource="http://example.org/library#Format"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>AudioBook</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#StephenChbosky">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Stephen Chbosky</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Stephen Chbosky</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#LandStories1">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Land of Stories: The Wishing Spell</lib:hasTitle>
+    <rdfs:label>The Land of Stories: The Wishing Spell</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">464</lib:hasPageCount>
+    <lib:hasDescription>Twins fall into a book of fairy tales and must find a way home.</lib:hasDescription>
+    <lib:hasISBN>978-0-2012-2163-8</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#ChrisColfer"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#BillBryson">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Bill Bryson</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1951</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Bill Bryson</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#PetSematary">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Pet Sematary</lib:hasTitle>
+    <rdfs:label>Pet Sematary</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1983</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">374</lib:hasPageCount>
+    <lib:hasDescription>A family discovers a burial ground that brings the dead back to life.</lib:hasDescription>
+    <lib:hasISBN>978-0-1983-2964-2</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#StephenKing"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#HorrorInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#AaronBlabey">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Aaron Blabey</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</lib:hasBirthYear>
+    <lib:hasNationality>Australian</lib:hasNationality>
+    <rdfs:label>Aaron Blabey</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#History">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#HarryPotter3">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Harry Potter and the Prisoner of Azkaban</lib:hasTitle>
+    <rdfs:label>Harry Potter and the Prisoner of Azkaban</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1999</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">435</lib:hasPageCount>
+    <lib:hasDescription>Harry learns about his godfather, an escaped prisoner believed to be dangerous.</lib:hasDescription>
+    <lib:hasISBN>978-0-1999-0435-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#JKRowling"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#CharlotteWeb">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Charlotte's Web</lib:hasTitle>
+    <rdfs:label>Charlotte's Web</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1952</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">184</lib:hasPageCount>
+    <lib:hasDescription>A spider named Charlotte helps save Wilbur the pig from slaughter.</lib:hasDescription>
+    <lib:hasISBN>978-0-1952-0944-5</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#EBWhite"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#BrandonSanderson">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Brandon Sanderson</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Brandon Sanderson</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#CatInHat">
+    <rdf:type rdf:resource="http://example.org/library#FictionBook"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Cat in the Hat</lib:hasTitle>
+    <rdfs:label>The Cat in the Hat</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1957</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">61</lib:hasPageCount>
+    <lib:hasDescription>A tall cat in a striped hat brings chaos and fun to two children on a rainy day.</lib:hasDescription>
+    <lib:hasISBN>978-0-1957-6843-8</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#DrSeuss"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#EarlyChildhood"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#HarryPotter1">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Harry Potter and the Philosopher's Stone</lib:hasTitle>
+    <rdfs:label>Harry Potter and the Philosopher's Stone</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1997</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">309</lib:hasPageCount>
+    <lib:hasDescription>An orphaned boy discovers he's a wizard and attends Hogwarts School of Witchcraft.</lib:hasDescription>
+    <lib:hasISBN>978-0-1997-1239-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#JKRowling"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#CheckedOut"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#MazeRunner">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Maze Runner</lib:hasTitle>
+    <rdfs:label>The Maze Runner</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">374</lib:hasPageCount>
+    <lib:hasDescription>Thomas wakes up in a maze with no memory and must find a way out.</lib:hasDescription>
+    <lib:hasISBN>978-0-2009-8699-5</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#JamesDashner"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ScienceFictionInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#MadelineMiller">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Madeline Miller</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1978</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Madeline Miller</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#StuartLittle">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Stuart Little</lib:hasTitle>
+    <rdfs:label>Stuart Little</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1945</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">131</lib:hasPageCount>
+    <lib:hasDescription>A tiny mouse born to a human family has big adventures in New York City.</lib:hasDescription>
+    <lib:hasISBN>978-0-1945-7020-3</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#EBWhite"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#ChrisColfer">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Chris Colfer</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1990</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Chris Colfer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#JasonReynolds">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Jason Reynolds</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1983</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Jason Reynolds</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#JohnGreen">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>John Green</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1977</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>John Green</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#PridePreju">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Pride and Prejudice</lib:hasTitle>
+    <rdfs:label>Pride and Prejudice</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1813</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">432</lib:hasPageCount>
+    <lib:hasDescription>Elizabeth Bennet navigates society, family, and love in Regency England.</lib:hasDescription>
+    <lib:hasISBN>978-0-1813-3067-9</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#JaneAusten"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#RomanceInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#StephenHawking">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Stephen Hawking</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1942</lib:hasBirthYear>
+    <lib:hasNationality>British</lib:hasNationality>
+    <rdfs:label>Stephen Hawking</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#ITBook">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>It</lib:hasTitle>
+    <rdfs:label>It</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1986</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1138</lib:hasPageCount>
+    <lib:hasDescription>A group of friends face an ancient evil that takes the form of a clown.</lib:hasDescription>
+    <lib:hasISBN>978-0-1986-4276-2</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#StephenKing"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#HorrorInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#CheckedOut"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#MagnusChase1">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Magnus Chase and the Sword of Summer</lib:hasTitle>
+    <rdfs:label>Magnus Chase and the Sword of Summer</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">491</lib:hasPageCount>
+    <lib:hasDescription>Magnus discovers he's the son of a Norse god and must prevent Ragnarok.</lib:hasDescription>
+    <lib:hasISBN>978-0-2015-1518-6</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#RickRiordan"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#ShortHistoryNearly">
+    <rdf:type rdf:resource="http://example.org/library#NonFictionBook"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>A Short History of Nearly Everything</lib:hasTitle>
+    <rdfs:label>A Short History of Nearly Everything</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2003</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">544</lib:hasPageCount>
+    <lib:hasDescription>An accessible guide to science from the Big Bang to the rise of civilization.</lib:hasDescription>
+    <lib:hasISBN>978-0-2003-7664-6</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#BillBryson"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ScienceInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#YoungAdult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Reserved"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#TheShining">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Shining</lib:hasTitle>
+    <rdfs:label>The Shining</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1977</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">447</lib:hasPageCount>
+    <lib:hasDescription>A family becomes trapped in a haunted hotel during winter.</lib:hasDescription>
+    <lib:hasISBN>978-0-1977-1983-1</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#StephenKing"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#HorrorInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#PhilosophyInstance">
+    <rdf:type rdf:resource="http://example.org/library#Philosophy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Philosophy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#LouisSachar">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Louis Sachar</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1954</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Louis Sachar</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#HungerGames2">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Catching Fire</lib:hasTitle>
+    <rdfs:label>Catching Fire</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">391</lib:hasPageCount>
+    <lib:hasDescription>Katniss and Peeta are forced back into the arena for a special Hunger Games.</lib:hasDescription>
+    <lib:hasISBN>978-0-2009-2788-3</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#SuzanneCollins"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ScienceFictionInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#YoungAdult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#PercyJackson1">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Percy Jackson and the Lightning Thief</lib:hasTitle>
+    <rdfs:label>Percy Jackson and the Lightning Thief</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">377</lib:hasPageCount>
+    <lib:hasDescription>A boy discovers he's a demigod son of Poseidon and must find Zeus's stolen lightning bolt.</lib:hasDescription>
+    <lib:hasISBN>978-0-2005-2216-7</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#RickRiordan"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#HungerGames3">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Mockingjay</lib:hasTitle>
+    <rdfs:label>Mockingjay</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">390</lib:hasPageCount>
+    <lib:hasDescription>Katniss becomes the symbol of rebellion against the Capitol.</lib:hasDescription>
+    <lib:hasISBN>978-0-2010-8314-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#SuzanneCollins"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ScienceFictionInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#YoungAdult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#TuiTSutherland">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Tui T. Sutherland</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1978</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Tui T. Sutherland</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#DeathNile">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Death on the Nile</lib:hasTitle>
+    <rdfs:label>Death on the Nile</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1937</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">288</lib:hasPageCount>
+    <lib:hasDescription>Poirot solves a murder during a Nile river cruise.</lib:hasDescription>
+    <lib:hasISBN>978-0-1937-5441-7</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#AgathaChristie"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#MysteryInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#MargotShetterly">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Margot Lee Shetterly</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Margot Lee Shetterly</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Romance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#StephenKing">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Stephen King</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1947</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Stephen King</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#EBook">
+    <rdf:type rdf:resource="http://example.org/library#Format"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>EBook</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Fahrenheit451">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Fahrenheit 451</lib:hasTitle>
+    <rdfs:label>Fahrenheit 451</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1953</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">194</lib:hasPageCount>
+    <lib:hasDescription>In a future where books are banned, a fireman begins to question his role.</lib:hasDescription>
+    <lib:hasISBN>978-0-1953-5893-4</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#RayBradbury"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ScienceFictionInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#YoungAdult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#PatrickRothfuss">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Patrick Rothfuss</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Patrick Rothfuss</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#WrinkleTime">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>A Wrinkle in Time</lib:hasTitle>
+    <rdfs:label>A Wrinkle in Time</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1962</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">256</lib:hasPageCount>
+    <lib:hasDescription>Meg travels through space and time to rescue her father from evil forces.</lib:hasDescription>
+    <lib:hasISBN>978-0-1962-0160-7</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#MadeleineEngle"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ScienceFictionInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#TechnologyInstance">
+    <rdf:type rdf:resource="http://example.org/library#Technology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Technology</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#HiddenFiguresYoung">
+    <rdf:type rdf:resource="http://example.org/library#NonFictionBook"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Hidden Figures Young Readers' Edition</lib:hasTitle>
+    <rdfs:label>Hidden Figures Young Readers' Edition</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</lib:hasPageCount>
+    <lib:hasDescription>The story of African-American women mathematicians at NASA.</lib:hasDescription>
+    <lib:hasISBN>978-0-2016-8361-7</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#MargotShetterly"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#HistoryInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasNationality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Author"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Divergent">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Divergent</lib:hasTitle>
+    <rdfs:label>Divergent</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">487</lib:hasPageCount>
+    <lib:hasDescription>In a divided society, Tris discovers she doesn't fit into any faction.</lib:hasDescription>
+    <lib:hasISBN>978-0-2011-5974-9</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#VeronicaRoth"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ScienceFictionInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Reserved"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#BrianJacques">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Brian Jacques</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1939</lib:hasBirthYear>
+    <lib:hasNationality>British</lib:hasNationality>
+    <rdfs:label>Brian Jacques</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#BrownBear">
+    <rdf:type rdf:resource="http://example.org/library#FictionBook"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Brown Bear, Brown Bear, What Do You See?</lib:hasTitle>
+    <rdfs:label>Brown Bear, Brown Bear, What Do You See?</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1967</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</lib:hasPageCount>
+    <lib:hasDescription>Animals of different colors are introduced in a rhythmic question-and-answer format.</lib:hasDescription>
+    <lib:hasISBN>978-0-1967-3142-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#EricCarle"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#EarlyChildhood"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#TheGiver">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Giver</lib:hasTitle>
+    <rdfs:label>The Giver</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1993</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</lib:hasPageCount>
+    <lib:hasDescription>In a seemingly perfect society, Jonas discovers the dark truth behind his community.</lib:hasDescription>
+    <lib:hasISBN>978-0-1993-9493-9</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#LoisLowry"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ScienceFictionInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasAuthorName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Author"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#EricCarle">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Eric Carle</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1929</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Eric Carle</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#JessBrellier">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Jess M. Brallier</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1953</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Jess M. Brallier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://example.org/library#Genre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Sports">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#AgathaChristie">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Agatha Christie</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1890</lib:hasBirthYear>
+    <lib:hasNationality>British</lib:hasNationality>
+    <rdfs:label>Agatha Christie</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#HarryPotter2">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Harry Potter and the Chamber of Secrets</lib:hasTitle>
+    <rdfs:label>Harry Potter and the Chamber of Secrets</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1998</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">341</lib:hasPageCount>
+    <lib:hasDescription>Harry returns to Hogwarts where a mysterious force is petrifying students.</lib:hasDescription>
+    <lib:hasISBN>978-0-1998-9350-9</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#JKRowling"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#MiddleGrade"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#HuckFinn">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Adventures of Huckleberry Finn</lib:hasTitle>
+    <rdfs:label>Adventures of Huckleberry Finn</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1884</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">366</lib:hasPageCount>
+    <lib:hasDescription>Huck escapes civilization and rafts down the Mississippi with an escaped slave.</lib:hasDescription>
+    <lib:hasISBN>978-0-1884-8600-0</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#MarkTwain"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#AdventureInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#EarlyChildhood">
+    <rdf:type rdf:resource="http://example.org/library#AgeGroup"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasMinAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</lib:hasMinAge>
+    <lib:hasMaxAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</lib:hasMaxAge>
+    <lib:hasAgeGroupName>Early Childhood (0-5)</lib:hasAgeGroupName>
+    <rdfs:label>Early Childhood (0-5)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#JoannaCole">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Joanna Cole</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1944</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Joanna Cole</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#MagicTreeHouse1">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Dinosaurs Before Dark</lib:hasTitle>
+    <rdfs:label>Dinosaurs Before Dark</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1992</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">68</lib:hasPageCount>
+    <lib:hasDescription>Jack and Annie travel back in time to the age of dinosaurs.</lib:hasDescription>
+    <lib:hasISBN>978-0-1992-4770-1</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#MaryPopeOsborne"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#AdventureInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#RomanceInstance">
+    <rdf:type rdf:resource="http://example.org/library#Romance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Romance</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label>Community Library Ontology</rdfs:label>
+    <rdfs:comment>An ontology for a community library search engine</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#IsaacAsimov">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Isaac Asimov</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1920</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Isaac Asimov</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Witches">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The Witches</lib:hasTitle>
+    <rdfs:label>The Witches</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1983</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">208</lib:hasPageCount>
+    <lib:hasDescription>A boy discovers a convention of witches plotting against children.</lib:hasDescription>
+    <lib:hasISBN>978-0-1983-7438-1</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#RoaldDahl"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#ABCMurders">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>The ABC Murders</lib:hasTitle>
+    <rdfs:label>The ABC Murders</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1936</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">256</lib:hasPageCount>
+    <lib:hasDescription>Poirot hunts a serial killer who strikes in alphabetical order.</lib:hasDescription>
+    <lib:hasISBN>978-0-1936-3865-5</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#AgathaChristie"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#MysteryInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#BriefHistoryTime">
+    <rdf:type rdf:resource="http://example.org/library#NonFictionBook"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>A Brief History of Time</lib:hasTitle>
+    <rdfs:label>A Brief History of Time</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1988</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">256</lib:hasPageCount>
+    <lib:hasDescription>An exploration of cosmology, black holes, and the nature of time.</lib:hasDescription>
+    <lib:hasISBN>978-0-1988-7849-3</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#StephenHawking"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ScienceInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#FoxSocks">
+    <rdf:type rdf:resource="http://example.org/library#FictionBook"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Fox in Socks</lib:hasTitle>
+    <rdfs:label>Fox in Socks</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1965</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">62</lib:hasPageCount>
+    <lib:hasDescription>A tongue-twisting adventure with Fox and Mr. Knox.</lib:hasDescription>
+    <lib:hasISBN>978-0-1965-5603-2</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#DrSeuss"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#EarlyChildhood"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#WhereWildThings">
+    <rdf:type rdf:resource="http://example.org/library#FictionBook"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Where the Wild Things Are</lib:hasTitle>
+    <rdfs:label>Where the Wild Things Are</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1963</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</lib:hasPageCount>
+    <lib:hasDescription>Max sails to an island of Wild Things where he becomes their king.</lib:hasDescription>
+    <lib:hasISBN>978-0-1963-8755-5</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#MauriceSendak"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#EarlyChildhood"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Hardcover"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#CheckedOut"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#MalcolmGladwell">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Malcolm Gladwell</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1963</lib:hasBirthYear>
+    <lib:hasNationality>Canadian</lib:hasNationality>
+    <rdfs:label>Malcolm Gladwell</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#JohnGrisham">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>John Grisham</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1955</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>John Grisham</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#RickRiordan">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Rick Riordan</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1964</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Rick Riordan</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#CornelaFunke">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Cornelia Funke</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1958</lib:hasBirthYear>
+    <lib:hasNationality>German</lib:hasNationality>
+    <rdfs:label>Cornelia Funke</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#MichelleObama">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Michelle Obama</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1964</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Michelle Obama</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Science">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#FictionGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#Genre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#NonFictionGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#Genre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#NicholasSparks">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Nicholas Sparks</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1965</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Nicholas Sparks</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#WilliamGibson">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>William Gibson</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1948</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>William Gibson</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#SportsInstance">
+    <rdf:type rdf:resource="http://example.org/library#Sports"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Sports</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#MaryPopeOsborne">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Mary Pope Osborne</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1949</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Mary Pope Osborne</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#2001SpaceOdyssey">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>2001: A Space Odyssey</lib:hasTitle>
+    <rdfs:label>2001: A Space Odyssey</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1968</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">297</lib:hasPageCount>
+    <lib:hasDescription>A voyage to Jupiter leads to discovery of alien intelligence.</lib:hasDescription>
+    <lib:hasISBN>978-0-1968-7623-1</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#ArthurCClarke"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#ScienceFictionInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Fantasy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#TerryPratchett">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Terry Pratchett</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1948</lib:hasBirthYear>
+    <lib:hasNationality>British</lib:hasNationality>
+    <rdfs:label>Terry Pratchett</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Poetry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionBook"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#StiegLarsson">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Stieg Larsson</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1954</lib:hasBirthYear>
+    <lib:hasNationality>Swedish</lib:hasNationality>
+    <rdfs:label>Stieg Larsson</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasBirthYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Author"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#ArthurCClarke">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Arthur C. Clarke</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1917</lib:hasBirthYear>
+    <lib:hasNationality>British</lib:hasNationality>
+    <rdfs:label>Arthur C. Clarke</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#YuvalHarari">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Yuval Noah Harari</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</lib:hasBirthYear>
+    <lib:hasNationality>Israeli</lib:hasNationality>
+    <rdfs:label>Yuval Noah Harari</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#authorOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Author"/>
+    <rdfs:range rdf:resource="http://example.org/library#Book"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#JeffKinney">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Jeff Kinney</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Jeff Kinney</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasPageCount">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Philosophy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#HistoryInstance">
+    <rdf:type rdf:resource="http://example.org/library#History"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>History</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#HistoricalFiction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#MalalaYousafzai">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Malala Yousafzai</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1997</lib:hasBirthYear>
+    <lib:hasNationality>Pakistani</lib:hasNationality>
+    <rdfs:label>Malala Yousafzai</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#ScienceInstance">
+    <rdf:type rdf:resource="http://example.org/library#Science"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Science</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://example.org/library#AvailabilityStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#TamoraPrice">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Tamora Pierce</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1954</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Tamora Pierce</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#MichaelEnde">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Michael Ende</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1929</lib:hasBirthYear>
+    <lib:hasNationality>German</lib:hasNationality>
+    <rdfs:label>Michael Ende</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Sapiens">
+    <rdf:type rdf:resource="http://example.org/library#NonFictionBook"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Sapiens: A Brief History of Humankind</lib:hasTitle>
+    <rdfs:label>Sapiens: A Brief History of Humankind</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">443</lib:hasPageCount>
+    <lib:hasDescription>The history of humankind from the Stone Age to the present.</lib:hasDescription>
+    <lib:hasISBN>978-0-2011-4459-7</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#YuvalHarari"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#HistoryInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Adult"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Mystery">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#DragonMasters1">
+    <rdf:type rdf:resource="http://example.org/library#Novel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasTitle>Rise of the Earth Dragon</lib:hasTitle>
+    <rdfs:label>Rise of the Earth Dragon</rdfs:label>
+    <lib:hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</lib:hasPublicationYear>
+    <lib:hasPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</lib:hasPageCount>
+    <lib:hasDescription>Drake is chosen to be a Dragon Master and must learn to connect with his dragon.</lib:hasDescription>
+    <lib:hasISBN>978-0-2014-2439-4</lib:hasISBN>
+    <lib:hasAuthor rdf:resource="http://example.org/library#TraceaWest"/>
+    <lib:hasGenre rdf:resource="http://example.org/library#FantasyInstance"/>
+    <lib:forAgeGroup rdf:resource="http://example.org/library#Children"/>
+    <lib:hasFormat rdf:resource="http://example.org/library#Paperback"/>
+    <lib:hasStatus rdf:resource="http://example.org/library#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#ScienceFictionInstance">
+    <rdf:type rdf:resource="http://example.org/library#ScienceFiction"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>ScienceFiction</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#JamesDashner">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>James Dashner</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>James Dashner</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Biography">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionBook"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#MarkTwain">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Mark Twain</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1835</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Mark Twain</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#YoungAdult">
+    <rdf:type rdf:resource="http://example.org/library#AgeGroup"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasMinAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</lib:hasMinAge>
+    <lib:hasMaxAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</lib:hasMaxAge>
+    <lib:hasAgeGroupName>Young Adult (13-17)</lib:hasAgeGroupName>
+    <rdfs:label>Young Adult (13-17)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#OrsonScottCard">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Orson Scott Card</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1951</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Orson Scott Card</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#UrsulaLeGuin">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Ursula K. Le Guin</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1929</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Ursula K. Le Guin</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#MiddleGrade">
+    <rdf:type rdf:resource="http://example.org/library#AgeGroup"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasMinAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</lib:hasMinAge>
+    <lib:hasMaxAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</lib:hasMaxAge>
+    <lib:hasAgeGroupName>Middle Grade (9-12)</lib:hasAgeGroupName>
+    <rdfs:label>Middle Grade (9-12)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#BrandonMull">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Brandon Mull</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Brandon Mull</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#ThrillerInstance">
+    <rdf:type rdf:resource="http://example.org/library#Thriller"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Thriller</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasTitle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Arts">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Horror">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasMaxAge">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#AgeGroup"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#DavPilkey">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Dav Pilkey</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1966</lib:hasBirthYear>
+    <lib:hasNationality>American</lib:hasNationality>
+    <rdfs:label>Dav Pilkey</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Nature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasISBN">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#DianneWynneJones">
+    <rdf:type rdf:resource="http://example.org/library#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <lib:hasAuthorName>Diana Wynne Jones</lib:hasAuthorName>
+    <lib:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1934</lib:hasBirthYear>
+    <lib:hasNationality>British</lib:hasNationality>
+    <rdfs:label>Diana Wynne Jones</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasMinAge">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#AgeGroup"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#NatureInstance">
+    <rdf:type rdf:resource="http://example.org/library#Nature"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Nature</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#CheckedOut">
+    <rdf:type rdf:resource="http://example.org/library#AvailabilityStatus"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>CheckedOut</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Thriller">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Format">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Educational">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionBook"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#FictionBook">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#Book"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#writtenBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://example.org/library#Author"/>
+    <owl:inverseOf rdf:resource="http://example.org/library#authorOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Book">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#ShortStoryCollection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionBook"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasAgeGroupName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#AgeGroup"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#AdventureInstance">
+    <rdf:type rdf:resource="http://example.org/library#Adventure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Adventure</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Author">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Adventure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasFormat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://example.org/library#Format"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#BiographyGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#SelfHelp">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionBook"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Novel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#FictionBook"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#hasAuthor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/library#Book"/>
+    <rdfs:range rdf:resource="http://example.org/library#Author"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Technology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#NonFictionGenre"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#NonFictionBook">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/library#Book"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/library#Genre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

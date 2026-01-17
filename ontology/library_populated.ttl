@@ -1,0 +1,2393 @@
+@prefix lib: <http://example.org/library#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/library> a owl:Ontology ;
+    rdfs:label "Community Library Ontology" ;
+    rdfs:comment "An ontology for a community library search engine" .
+
+lib:1984Book a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "1984" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:GeorgeOrwell ;
+    lib:hasDescription "Winston Smith struggles against a totalitarian regime that controls all aspects of life." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:ScienceFictionInstance ;
+    lib:hasISBN "978-0-1949-2021-4" ;
+    lib:hasPageCount 328 ;
+    lib:hasPublicationYear 1949 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "1984" .
+
+lib:2001SpaceOdyssey a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "2001: A Space Odyssey" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:ArthurCClarke ;
+    lib:hasDescription "A voyage to Jupiter leads to discovery of alien intelligence." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:ScienceFictionInstance ;
+    lib:hasISBN "978-0-1968-7623-1" ;
+    lib:hasPageCount 297 ;
+    lib:hasPublicationYear 1968 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "2001: A Space Odyssey" .
+
+lib:ABCMurders a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The ABC Murders" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:AgathaChristie ;
+    lib:hasDescription "Poirot hunts a serial killer who strikes in alphabetical order." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:MysteryInstance ;
+    lib:hasISBN "978-0-1936-3865-5" ;
+    lib:hasPageCount 256 ;
+    lib:hasPublicationYear 1936 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The ABC Murders" .
+
+lib:AmericanGods a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "American Gods" ;
+    lib:forAgeGroup lib:YoungAdult ;
+    lib:hasAuthor lib:NeilGaiman ;
+    lib:hasDescription "A man becomes embroiled in a war between old gods and new in America." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-2001-0431-3" ;
+    lib:hasPageCount 541 ;
+    lib:hasPublicationYear 2001 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "American Gods" .
+
+lib:AnimalFarm a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Animal Farm" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:GeorgeOrwell ;
+    lib:hasDescription "Animals overthrow their human farmer but the pigs become just as oppressive." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:ScienceFictionInstance ;
+    lib:hasISBN "978-0-1945-9969-1" ;
+    lib:hasPageCount 112 ;
+    lib:hasPublicationYear 1945 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Animal Farm" .
+
+lib:ArtsInstance a lib:Arts,
+        owl:NamedIndividual ;
+    rdfs:label "Arts" .
+
+lib:AudioBook a lib:Format,
+        owl:NamedIndividual ;
+    rdfs:label "AudioBook" .
+
+lib:BFG a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The BFG" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:RoaldDahl ;
+    lib:hasDescription "Sophie befriends the Big Friendly Giant who catches dreams." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1982-6128-7" ;
+    lib:hasPageCount 208 ;
+    lib:hasPublicationYear 1982 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The BFG" .
+
+lib:BadGuys1 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Bad Guys" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:AaronBlabey ;
+    lib:hasDescription "Villainous animals try to become heroes." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:AdventureInstance ;
+    lib:hasISBN "978-0-2015-2295-2" ;
+    lib:hasPageCount 144 ;
+    lib:hasPublicationYear 2015 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Bad Guys" .
+
+lib:Becoming a lib:Biography,
+        owl:NamedIndividual ;
+    rdfs:label "Becoming" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:MichelleObama ;
+    lib:hasDescription "Michelle Obama's memoir about her journey to the White House." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:BiographyGenreInstance ;
+    lib:hasISBN "978-0-2018-5438-8" ;
+    lib:hasPageCount 448 ;
+    lib:hasPublicationYear 2018 ;
+    lib:hasStatus lib:CheckedOut ;
+    lib:hasTitle "Becoming" .
+
+lib:BiographyGenre a owl:Class ;
+    rdfs:subClassOf lib:NonFictionGenre .
+
+lib:BridgeTerabithia a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Bridge to Terabithia" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:KatherinePaterson ;
+    lib:hasDescription "Two outsiders create a magical kingdom in the woods called Terabithia." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1977-9670-0" ;
+    lib:hasPageCount 163 ;
+    lib:hasPublicationYear 1977 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Bridge to Terabithia" .
+
+lib:BriefHistoryTime a lib:NonFictionBook,
+        owl:NamedIndividual ;
+    rdfs:label "A Brief History of Time" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:StephenHawking ;
+    lib:hasDescription "An exploration of cosmology, black holes, and the nature of time." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:ScienceInstance ;
+    lib:hasISBN "978-0-1988-7849-3" ;
+    lib:hasPageCount 256 ;
+    lib:hasPublicationYear 1988 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "A Brief History of Time" .
+
+lib:BrownBear a lib:FictionBook,
+        owl:NamedIndividual ;
+    rdfs:label "Brown Bear, Brown Bear, What Do You See?" ;
+    lib:forAgeGroup lib:EarlyChildhood ;
+    lib:hasAuthor lib:EricCarle ;
+    lib:hasDescription "Animals of different colors are introduced in a rhythmic question-and-answer format." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1967-3142-0" ;
+    lib:hasPageCount 28 ;
+    lib:hasPublicationYear 1967 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Brown Bear, Brown Bear, What Do You See?" .
+
+lib:CaptainUnderpants1 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Captain Underpants and the Perilous Plot" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:DavPilkey ;
+    lib:hasDescription "Two pranksters accidentally hypnotize their principal into becoming a superhero." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:AdventureInstance ;
+    lib:hasISBN "978-0-1997-8901-0" ;
+    lib:hasPageCount 128 ;
+    lib:hasPublicationYear 1997 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Captain Underpants and the Perilous Plot" .
+
+lib:CatInHat a lib:FictionBook,
+        owl:NamedIndividual ;
+    rdfs:label "The Cat in the Hat" ;
+    lib:forAgeGroup lib:EarlyChildhood ;
+    lib:hasAuthor lib:DrSeuss ;
+    lib:hasDescription "A tall cat in a striped hat brings chaos and fun to two children on a rainy day." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1957-6843-8" ;
+    lib:hasPageCount 61 ;
+    lib:hasPublicationYear 1957 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Cat in the Hat" .
+
+lib:CharlieChocolate a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Charlie and the Chocolate Factory" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:RoaldDahl ;
+    lib:hasDescription "Charlie Bucket wins a tour of Willy Wonka's magical chocolate factory." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1964-7692-3" ;
+    lib:hasPageCount 192 ;
+    lib:hasPublicationYear 1964 ;
+    lib:hasStatus lib:CheckedOut ;
+    lib:hasTitle "Charlie and the Chocolate Factory" .
+
+lib:CharlotteWeb a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Charlotte's Web" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:EBWhite ;
+    lib:hasDescription "A spider named Charlotte helps save Wilbur the pig from slaughter." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1952-0944-5" ;
+    lib:hasPageCount 184 ;
+    lib:hasPublicationYear 1952 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Charlotte's Web" .
+
+lib:Coraline a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Coraline" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:NeilGaiman ;
+    lib:hasDescription "A girl discovers a parallel world where her Other Mother wants to keep her forever." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:HorrorInstance ;
+    lib:hasISBN "978-0-2002-7130-8" ;
+    lib:hasPageCount 162 ;
+    lib:hasPublicationYear 2002 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Coraline" .
+
+lib:Cosmos a lib:NonFictionBook,
+        owl:NamedIndividual ;
+    rdfs:label "Cosmos" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:CarlSagan ;
+    lib:hasDescription "A journey through the universe exploring science and civilization." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:ScienceInstance ;
+    lib:hasISBN "978-0-1980-7641-6" ;
+    lib:hasPageCount 384 ;
+    lib:hasPublicationYear 1980 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Cosmos" .
+
+lib:DaVinciCode a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Da Vinci Code" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:DanBrown ;
+    lib:hasDescription "A professor unravels a murder mystery involving religious secrets." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:ThrillerInstance ;
+    lib:hasISBN "978-0-2003-5695-7" ;
+    lib:hasPageCount 454 ;
+    lib:hasPublicationYear 2003 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Da Vinci Code" .
+
+lib:DeathNile a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Death on the Nile" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:AgathaChristie ;
+    lib:hasDescription "Poirot solves a murder during a Nile river cruise." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:MysteryInstance ;
+    lib:hasISBN "978-0-1937-5441-7" ;
+    lib:hasPageCount 288 ;
+    lib:hasPublicationYear 1937 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Death on the Nile" .
+
+lib:DiaryWimpyKid1 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Diary of a Wimpy Kid" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:JeffKinney ;
+    lib:hasDescription "Greg Heffley chronicles his attempts to survive middle school." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:AdventureInstance ;
+    lib:hasISBN "978-0-2007-7410-0" ;
+    lib:hasPageCount 217 ;
+    lib:hasPublicationYear 2007 ;
+    lib:hasStatus lib:Reserved ;
+    lib:hasTitle "Diary of a Wimpy Kid" .
+
+lib:Divergent a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Divergent" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:VeronicaRoth ;
+    lib:hasDescription "In a divided society, Tris discovers she doesn't fit into any faction." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:ScienceFictionInstance ;
+    lib:hasISBN "978-0-2011-5974-9" ;
+    lib:hasPageCount 487 ;
+    lib:hasPublicationYear 2011 ;
+    lib:hasStatus lib:Reserved ;
+    lib:hasTitle "Divergent" .
+
+lib:DogMan1 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Dog Man" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:DavPilkey ;
+    lib:hasDescription "A cop and his police dog become one superhero." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:AdventureInstance ;
+    lib:hasISBN "978-0-2016-8616-7" ;
+    lib:hasPageCount 224 ;
+    lib:hasPublicationYear 2016 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Dog Man" .
+
+lib:DragonMasters1 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Rise of the Earth Dragon" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:TraceaWest ;
+    lib:hasDescription "Drake is chosen to be a Dragon Master and must learn to connect with his dragon." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-2014-2439-4" ;
+    lib:hasPageCount 96 ;
+    lib:hasPublicationYear 2014 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Rise of the Earth Dragon" .
+
+lib:DuneBook a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Dune" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:FrankHerbert ;
+    lib:hasDescription "Paul Atreides must survive on a desert planet and fulfill a prophecy." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:ScienceFictionInstance ;
+    lib:hasISBN "978-0-1965-6137-4" ;
+    lib:hasPageCount 412 ;
+    lib:hasPublicationYear 1965 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Dune" .
+
+lib:EBook a lib:Format,
+        owl:NamedIndividual ;
+    rdfs:label "EBook" .
+
+lib:EllaCinder a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Ella Enchanted" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:GailCarsonLevine ;
+    lib:hasDescription "A retelling of Cinderella where Ella is cursed to obey any command given to her." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1997-5723-4" ;
+    lib:hasPageCount 232 ;
+    lib:hasPublicationYear 1997 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Ella Enchanted" .
+
+lib:EndersGame a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Ender's Game" ;
+    lib:forAgeGroup lib:YoungAdult ;
+    lib:hasAuthor lib:OrsonScottCard ;
+    lib:hasDescription "A genius child is trained in a military academy to fight an alien threat." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:ScienceFictionInstance ;
+    lib:hasISBN "978-0-1985-9739-2" ;
+    lib:hasPageCount 324 ;
+    lib:hasPublicationYear 1985 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Ender's Game" .
+
+lib:Fablehaven1 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Fablehaven" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:BrandonMull ;
+    lib:hasDescription "Siblings discover their grandparents' estate is a secret preserve for magical creatures." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-2006-9163-0" ;
+    lib:hasPageCount 351 ;
+    lib:hasPublicationYear 2006 ;
+    lib:hasStatus lib:CheckedOut ;
+    lib:hasTitle "Fablehaven" .
+
+lib:Fahrenheit451 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Fahrenheit 451" ;
+    lib:forAgeGroup lib:YoungAdult ;
+    lib:hasAuthor lib:RayBradbury ;
+    lib:hasDescription "In a future where books are banned, a fireman begins to question his role." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:ScienceFictionInstance ;
+    lib:hasISBN "978-0-1953-5893-4" ;
+    lib:hasPageCount 194 ;
+    lib:hasPublicationYear 1953 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Fahrenheit 451" .
+
+lib:FaultInStars a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Fault in Our Stars" ;
+    lib:forAgeGroup lib:YoungAdult ;
+    lib:hasAuthor lib:JohnGreen ;
+    lib:hasDescription "Two teenagers with cancer fall in love at a support group." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:RomanceInstance ;
+    lib:hasISBN "978-0-2012-5700-2" ;
+    lib:hasPageCount 313 ;
+    lib:hasPublicationYear 2012 ;
+    lib:hasStatus lib:CheckedOut ;
+    lib:hasTitle "The Fault in Our Stars" .
+
+lib:FoundationBook a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Foundation" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:IsaacAsimov ;
+    lib:hasDescription "A mathematician predicts the fall of the Galactic Empire and works to preserve knowledge." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:ScienceFictionInstance ;
+    lib:hasISBN "978-0-1951-1280-0" ;
+    lib:hasPageCount 296 ;
+    lib:hasPublicationYear 1951 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Foundation" .
+
+lib:FoxSocks a lib:FictionBook,
+        owl:NamedIndividual ;
+    rdfs:label "Fox in Socks" ;
+    lib:forAgeGroup lib:EarlyChildhood ;
+    lib:hasAuthor lib:DrSeuss ;
+    lib:hasDescription "A tongue-twisting adventure with Fox and Mr. Knox." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1965-5603-2" ;
+    lib:hasPageCount 62 ;
+    lib:hasPublicationYear 1965 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Fox in Socks" .
+
+lib:GameThrones a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "A Game of Thrones" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:GeorgeRRMartin ;
+    lib:hasDescription "Noble families vie for control of the Iron Throne in a medieval fantasy world." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1996-7618-7" ;
+    lib:hasPageCount 694 ;
+    lib:hasPublicationYear 1996 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "A Game of Thrones" .
+
+lib:GeorgeMarvelous a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "George's Marvelous Medicine" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:RoaldDahl ;
+    lib:hasDescription "George creates a magic medicine for his unpleasant grandmother." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1981-3160-7" ;
+    lib:hasPageCount 112 ;
+    lib:hasPublicationYear 1981 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "George's Marvelous Medicine" .
+
+lib:GirlDragonTattoo a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Girl with the Dragon Tattoo" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:StiegLarsson ;
+    lib:hasDescription "A journalist and hacker investigate a decades-old disappearance." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:ThrillerInstance ;
+    lib:hasISBN "978-0-2005-1733-1" ;
+    lib:hasPageCount 465 ;
+    lib:hasPublicationYear 2005 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Girl with the Dragon Tattoo" .
+
+lib:GoldenCompass a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Golden Compass" ;
+    lib:forAgeGroup lib:YoungAdult ;
+    lib:hasAuthor lib:PhilipPullman ;
+    lib:hasDescription "Lyra journeys to the Arctic to save kidnapped children and uncover a cosmic conspiracy." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1995-2769-8" ;
+    lib:hasPageCount 399 ;
+    lib:hasPublicationYear 1995 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Golden Compass" .
+
+lib:GoneGirl a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Gone Girl" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:GillianFlynn ;
+    lib:hasDescription "A woman disappears and her husband becomes the prime suspect." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:ThrillerInstance ;
+    lib:hasISBN "978-0-2012-3000-9" ;
+    lib:hasPageCount 432 ;
+    lib:hasPublicationYear 2012 ;
+    lib:hasStatus lib:Reserved ;
+    lib:hasTitle "Gone Girl" .
+
+lib:GoodNightMoon a lib:FictionBook,
+        owl:NamedIndividual ;
+    rdfs:label "Goodnight Moon" ;
+    lib:forAgeGroup lib:EarlyChildhood ;
+    lib:hasAuthor lib:MauriceSendak ;
+    lib:hasDescription "A bunny says goodnight to everything around him in a great green room." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1947-7918-4" ;
+    lib:hasPageCount 32 ;
+    lib:hasPublicationYear 1947 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Goodnight Moon" .
+
+lib:GoodOmens a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Good Omens" ;
+    lib:forAgeGroup lib:YoungAdult ;
+    lib:hasAuthor lib:NeilGaiman ;
+    lib:hasDescription "An angel and demon team up to prevent the apocalypse." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1990-7409-0" ;
+    lib:hasPageCount 432 ;
+    lib:hasPublicationYear 1990 ;
+    lib:hasStatus lib:CheckedOut ;
+    lib:hasTitle "Good Omens" .
+
+lib:GreenEggsHam a lib:FictionBook,
+        owl:NamedIndividual ;
+    rdfs:label "Green Eggs and Ham" ;
+    lib:forAgeGroup lib:EarlyChildhood ;
+    lib:hasAuthor lib:DrSeuss ;
+    lib:hasDescription "Sam-I-Am persistently tries to convince another character to try green eggs and ham." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1960-3751-8" ;
+    lib:hasPageCount 62 ;
+    lib:hasPublicationYear 1960 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Green Eggs and Ham" .
+
+lib:HarryPotter1 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Harry Potter and the Philosopher's Stone" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:JKRowling ;
+    lib:hasDescription "An orphaned boy discovers he's a wizard and attends Hogwarts School of Witchcraft." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1997-1239-0" ;
+    lib:hasPageCount 309 ;
+    lib:hasPublicationYear 1997 ;
+    lib:hasStatus lib:CheckedOut ;
+    lib:hasTitle "Harry Potter and the Philosopher's Stone" .
+
+lib:HarryPotter2 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Harry Potter and the Chamber of Secrets" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:JKRowling ;
+    lib:hasDescription "Harry returns to Hogwarts where a mysterious force is petrifying students." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1998-9350-9" ;
+    lib:hasPageCount 341 ;
+    lib:hasPublicationYear 1998 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Harry Potter and the Chamber of Secrets" .
+
+lib:HarryPotter3 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Harry Potter and the Prisoner of Azkaban" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:JKRowling ;
+    lib:hasDescription "Harry learns about his godfather, an escaped prisoner believed to be dangerous." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1999-0435-0" ;
+    lib:hasPageCount 435 ;
+    lib:hasPublicationYear 1999 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Harry Potter and the Prisoner of Azkaban" .
+
+lib:HarryPotter4 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Harry Potter and the Goblet of Fire" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:JKRowling ;
+    lib:hasDescription "Harry competes in the dangerous Triwizard Tournament." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-2000-5869-5" ;
+    lib:hasPageCount 636 ;
+    lib:hasPublicationYear 2000 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Harry Potter and the Goblet of Fire" .
+
+lib:HiddenFiguresYoung a lib:NonFictionBook,
+        owl:NamedIndividual ;
+    rdfs:label "Hidden Figures Young Readers' Edition" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:MargotShetterly ;
+    lib:hasDescription "The story of African-American women mathematicians at NASA." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:HistoryInstance ;
+    lib:hasISBN "978-0-2016-8361-7" ;
+    lib:hasPageCount 240 ;
+    lib:hasPublicationYear 2016 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Hidden Figures Young Readers' Edition" .
+
+lib:Hobbit a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Hobbit" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:JRRTolkien ;
+    lib:hasDescription "Bilbo Baggins joins a quest to reclaim a dwarven kingdom from a dragon." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1937-5579-0" ;
+    lib:hasPageCount 310 ;
+    lib:hasPublicationYear 1937 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Hobbit" .
+
+lib:HolesBook a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Holes" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:LouisSachar ;
+    lib:hasDescription "Stanley Yelnats is sent to a boys' camp where he must dig holes every day." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:AdventureInstance ;
+    lib:hasISBN "978-0-1998-8080-5" ;
+    lib:hasPageCount 233 ;
+    lib:hasPublicationYear 1998 ;
+    lib:hasStatus lib:Reserved ;
+    lib:hasTitle "Holes" .
+
+lib:HopOnPop a lib:FictionBook,
+        owl:NamedIndividual ;
+    rdfs:label "Hop on Pop" ;
+    lib:forAgeGroup lib:EarlyChildhood ;
+    lib:hasAuthor lib:DrSeuss ;
+    lib:hasDescription "A simple rhyming book for beginning readers." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1963-5131-0" ;
+    lib:hasPageCount 64 ;
+    lib:hasPublicationYear 1963 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Hop on Pop" .
+
+lib:HowlMovingCastle a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Howl's Moving Castle" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:DianneWynneJones ;
+    lib:hasDescription "Sophie is cursed to become an old woman and seeks help from the wizard Howl." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1986-2186-0" ;
+    lib:hasPageCount 336 ;
+    lib:hasPublicationYear 1986 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Howl's Moving Castle" .
+
+lib:HuckFinn a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Adventures of Huckleberry Finn" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:MarkTwain ;
+    lib:hasDescription "Huck escapes civilization and rafts down the Mississippi with an escaped slave." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:AdventureInstance ;
+    lib:hasISBN "978-0-1884-8600-0" ;
+    lib:hasPageCount 366 ;
+    lib:hasPublicationYear 1884 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Adventures of Huckleberry Finn" .
+
+lib:HungerGames1 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Hunger Games" ;
+    lib:forAgeGroup lib:YoungAdult ;
+    lib:hasAuthor lib:SuzanneCollins ;
+    lib:hasDescription "Katniss volunteers for a televised fight to the death in a dystopian future." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:ScienceFictionInstance ;
+    lib:hasISBN "978-0-2008-2285-6" ;
+    lib:hasPageCount 374 ;
+    lib:hasPublicationYear 2008 ;
+    lib:hasStatus lib:CheckedOut ;
+    lib:hasTitle "The Hunger Games" .
+
+lib:HungerGames2 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Catching Fire" ;
+    lib:forAgeGroup lib:YoungAdult ;
+    lib:hasAuthor lib:SuzanneCollins ;
+    lib:hasDescription "Katniss and Peeta are forced back into the arena for a special Hunger Games." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:ScienceFictionInstance ;
+    lib:hasISBN "978-0-2009-2788-3" ;
+    lib:hasPageCount 391 ;
+    lib:hasPublicationYear 2009 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Catching Fire" .
+
+lib:HungerGames3 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Mockingjay" ;
+    lib:forAgeGroup lib:YoungAdult ;
+    lib:hasAuthor lib:SuzanneCollins ;
+    lib:hasDescription "Katniss becomes the symbol of rebellion against the Capitol." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:ScienceFictionInstance ;
+    lib:hasISBN "978-0-2010-8314-0" ;
+    lib:hasPageCount 390 ;
+    lib:hasPublicationYear 2010 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Mockingjay" .
+
+lib:IAmMalala a lib:Biography,
+        owl:NamedIndividual ;
+    rdfs:label "I Am Malala: Young Readers Edition" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:MalalaYousafzai ;
+    lib:hasDescription "Malala's story of standing up for girls' education." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:BiographyGenreInstance ;
+    lib:hasISBN "978-0-2014-9851-4" ;
+    lib:hasPageCount 240 ;
+    lib:hasPublicationYear 2014 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "I Am Malala: Young Readers Edition" .
+
+lib:ITBook a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "It" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:StephenKing ;
+    lib:hasDescription "A group of friends face an ancient evil that takes the form of a clown." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:HorrorInstance ;
+    lib:hasISBN "978-0-1986-4276-2" ;
+    lib:hasPageCount 1138 ;
+    lib:hasPublicationYear 1986 ;
+    lib:hasStatus lib:CheckedOut ;
+    lib:hasTitle "It" .
+
+lib:InkhartBook a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Inkheart" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:CornelaFunke ;
+    lib:hasDescription "A father can bring book characters to life when he reads aloud." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-2003-3425-8" ;
+    lib:hasPageCount 534 ;
+    lib:hasPublicationYear 2003 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Inkheart" .
+
+lib:JamesGiantPeach a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "James and the Giant Peach" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:RoaldDahl ;
+    lib:hasDescription "James escapes his cruel aunts inside a magical giant peach with insect friends." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1961-2036-5" ;
+    lib:hasPageCount 160 ;
+    lib:hasPublicationYear 1961 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "James and the Giant Peach" .
+
+lib:JasonReynolds a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Jason Reynolds" ;
+    lib:hasAuthorName "Jason Reynolds" ;
+    lib:hasBirthYear 1983 ;
+    lib:hasNationality "American" .
+
+lib:JudyBlume a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Judy Blume" ;
+    lib:hasAuthorName "Judy Blume" ;
+    lib:hasBirthYear 1938 ;
+    lib:hasNationality "American" .
+
+lib:LandStories1 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Land of Stories: The Wishing Spell" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:ChrisColfer ;
+    lib:hasDescription "Twins fall into a book of fairy tales and must find a way home." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-2012-2163-8" ;
+    lib:hasPageCount 464 ;
+    lib:hasPublicationYear 2012 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Land of Stories: The Wishing Spell" .
+
+lib:LeGuinWizard a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "A Wizard of Earthsea" ;
+    lib:forAgeGroup lib:YoungAdult ;
+    lib:hasAuthor lib:UrsulaLeGuin ;
+    lib:hasDescription "A young wizard must confront a shadow he released while learning magic." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1968-5234-0" ;
+    lib:hasPageCount 183 ;
+    lib:hasPublicationYear 1968 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "A Wizard of Earthsea" .
+
+lib:LloydAlexander a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Lloyd Alexander" ;
+    lib:hasAuthorName "Lloyd Alexander" ;
+    lib:hasBirthYear 1924 ;
+    lib:hasNationality "American" .
+
+lib:LoraxBook a lib:FictionBook,
+        owl:NamedIndividual ;
+    rdfs:label "The Lorax" ;
+    lib:forAgeGroup lib:EarlyChildhood ;
+    lib:hasAuthor lib:DrSeuss ;
+    lib:hasDescription "The Lorax speaks for the trees against the Once-ler's destruction." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1971-2119-9" ;
+    lib:hasPageCount 72 ;
+    lib:hasPublicationYear 1971 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Lorax" .
+
+lib:LordRings1 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Fellowship of the Ring" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:JRRTolkien ;
+    lib:hasDescription "Frodo Baggins begins his quest to destroy the One Ring." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1954-4708-6" ;
+    lib:hasPageCount 423 ;
+    lib:hasPublicationYear 1954 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Fellowship of the Ring" .
+
+lib:LordRings2 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Two Towers" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:JRRTolkien ;
+    lib:hasDescription "The fellowship is broken as war spreads across Middle-earth." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1954-3084-4" ;
+    lib:hasPageCount 352 ;
+    lib:hasPublicationYear 1954 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Two Towers" .
+
+lib:LordRings3 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Return of the King" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:JRRTolkien ;
+    lib:hasDescription "The final battle for Middle-earth and the fate of the Ring." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1955-0520-2" ;
+    lib:hasPageCount 416 ;
+    lib:hasPublicationYear 1955 ;
+    lib:hasStatus lib:Reserved ;
+    lib:hasTitle "The Return of the King" .
+
+lib:MagicSchoolBus a lib:Educational,
+        owl:NamedIndividual ;
+    rdfs:label "The Magic School Bus Inside the Human Body" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:JoannaCole ;
+    lib:hasDescription "Ms. Frizzle's class shrinks down to explore the human body." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:ScienceInstance ;
+    lib:hasISBN "978-0-1989-3635-2" ;
+    lib:hasPageCount 40 ;
+    lib:hasPublicationYear 1989 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Magic School Bus Inside the Human Body" .
+
+lib:MagicTreeHouse1 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Dinosaurs Before Dark" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:MaryPopeOsborne ;
+    lib:hasDescription "Jack and Annie travel back in time to the age of dinosaurs." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:AdventureInstance ;
+    lib:hasISBN "978-0-1992-4770-1" ;
+    lib:hasPageCount 68 ;
+    lib:hasPublicationYear 1992 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Dinosaurs Before Dark" .
+
+lib:MagnusChase1 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Magnus Chase and the Sword of Summer" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:RickRiordan ;
+    lib:hasDescription "Magnus discovers he's the son of a Norse god and must prevent Ragnarok." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-2015-1518-6" ;
+    lib:hasPageCount 491 ;
+    lib:hasPublicationYear 2015 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Magnus Chase and the Sword of Summer" .
+
+lib:Matilda a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Matilda" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:RoaldDahl ;
+    lib:hasDescription "A brilliant young girl with telekinetic powers stands up to her mean headmistress." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1988-5861-7" ;
+    lib:hasPageCount 240 ;
+    lib:hasPublicationYear 1988 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Matilda" .
+
+lib:MazeRunner a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Maze Runner" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:JamesDashner ;
+    lib:hasDescription "Thomas wakes up in a maze with no memory and must find a way out." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:ScienceFictionInstance ;
+    lib:hasISBN "978-0-2009-8699-5" ;
+    lib:hasPageCount 374 ;
+    lib:hasPublicationYear 2009 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Maze Runner" .
+
+lib:Misery a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Misery" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:StephenKing ;
+    lib:hasDescription "An author is held captive by his number one fan." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:HorrorInstance ;
+    lib:hasISBN "978-0-1987-9605-6" ;
+    lib:hasPageCount 310 ;
+    lib:hasPublicationYear 1987 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Misery" .
+
+lib:Mistborn1 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Mistborn: The Final Empire" ;
+    lib:forAgeGroup lib:YoungAdult ;
+    lib:hasAuthor lib:BrandonSanderson ;
+    lib:hasDescription "A street thief with special powers joins a rebellion against a tyrannical immortal ruler." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-2006-0125-6" ;
+    lib:hasPageCount 541 ;
+    lib:hasPublicationYear 2006 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Mistborn: The Final Empire" .
+
+lib:MurderOrientExpress a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Murder on the Orient Express" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:AgathaChristie ;
+    lib:hasDescription "Detective Hercule Poirot investigates a murder on a snowbound train." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:MysteryInstance ;
+    lib:hasISBN "978-0-1934-6880-8" ;
+    lib:hasPageCount 256 ;
+    lib:hasPublicationYear 1934 ;
+    lib:hasStatus lib:CheckedOut ;
+    lib:hasTitle "Murder on the Orient Express" .
+
+lib:NameWind a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Name of the Wind" ;
+    lib:forAgeGroup lib:YoungAdult ;
+    lib:hasAuthor lib:PatrickRothfuss ;
+    lib:hasDescription "A legendary figure recounts his journey from orphaned boy to notorious wizard." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-2007-1445-0" ;
+    lib:hasPageCount 662 ;
+    lib:hasPublicationYear 2007 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Name of the Wind" .
+
+lib:NarniaLion a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Lion, the Witch and the Wardrobe" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:CSLewis ;
+    lib:hasDescription "Four siblings discover a magical land through a wardrobe and help defeat the White Witch." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1950-8699-6" ;
+    lib:hasPageCount 208 ;
+    lib:hasPublicationYear 1950 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Lion, the Witch and the Wardrobe" .
+
+lib:NatGeoKidsOceans a lib:Educational,
+        owl:NamedIndividual ;
+    rdfs:label "National Geographic Kids: Ocean Animals" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:NatGeoKids ;
+    lib:hasDescription "A colorful guide to ocean creatures for young readers." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:NatureInstance ;
+    lib:hasISBN "978-0-2016-7726-9" ;
+    lib:hasPageCount 128 ;
+    lib:hasPublicationYear 2016 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "National Geographic Kids: Ocean Animals" .
+
+lib:NatGeoKidsSpace a lib:Educational,
+        owl:NamedIndividual ;
+    rdfs:label "National Geographic Kids: Space Encyclopedia" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:NatGeoKids ;
+    lib:hasDescription "Everything kids want to know about space and the universe." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:ScienceInstance ;
+    lib:hasISBN "978-0-2013-6918-4" ;
+    lib:hasPageCount 192 ;
+    lib:hasPublicationYear 2013 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "National Geographic Kids: Space Encyclopedia" .
+
+lib:Neuromancer a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Neuromancer" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:WilliamGibson ;
+    lib:hasDescription "A washed-up hacker is hired for the ultimate hack in cyberspace." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:ScienceFictionInstance ;
+    lib:hasISBN "978-0-1984-9719-1" ;
+    lib:hasPageCount 271 ;
+    lib:hasPublicationYear 1984 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Neuromancer" .
+
+lib:NeverendingStory a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Neverending Story" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:MichaelEnde ;
+    lib:hasDescription "A boy discovers a magical book that pulls him into its story." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1979-0166-1" ;
+    lib:hasPageCount 396 ;
+    lib:hasPublicationYear 1979 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Neverending Story" .
+
+lib:NumberStars a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Number the Stars" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:LoisLowry ;
+    lib:hasDescription "A Danish girl helps her Jewish friend escape the Nazis during World War II." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:HistoricalFictionInstance ;
+    lib:hasISBN "978-0-1989-1320-6" ;
+    lib:hasPageCount 137 ;
+    lib:hasPublicationYear 1989 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Number the Stars" .
+
+lib:OneFinshTwoFish a lib:FictionBook,
+        owl:NamedIndividual ;
+    rdfs:label "One Fish Two Fish Red Fish Blue Fish" ;
+    lib:forAgeGroup lib:EarlyChildhood ;
+    lib:hasAuthor lib:DrSeuss ;
+    lib:hasDescription "A whimsical story about fish and other creatures in rhyming verse." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1960-5994-6" ;
+    lib:hasPageCount 63 ;
+    lib:hasPublicationYear 1960 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "One Fish Two Fish Red Fish Blue Fish" .
+
+lib:Outliers a lib:NonFictionBook,
+        owl:NamedIndividual ;
+    rdfs:label "Outliers: The Story of Success" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:MalcolmGladwell ;
+    lib:hasDescription "An examination of what makes high achievers different." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:TechnologyInstance ;
+    lib:hasISBN "978-0-2008-1449-0" ;
+    lib:hasPageCount 309 ;
+    lib:hasPublicationYear 2008 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Outliers: The Story of Success" .
+
+lib:PercyJackson1 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Percy Jackson and the Lightning Thief" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:RickRiordan ;
+    lib:hasDescription "A boy discovers he's a demigod son of Poseidon and must find Zeus's stolen lightning bolt." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-2005-2216-7" ;
+    lib:hasPageCount 377 ;
+    lib:hasPublicationYear 2005 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Percy Jackson and the Lightning Thief" .
+
+lib:PercyJackson2 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Percy Jackson and the Sea of Monsters" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:RickRiordan ;
+    lib:hasDescription "Percy must find the Golden Fleece to save Camp Half-Blood." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-2006-5972-7" ;
+    lib:hasPageCount 279 ;
+    lib:hasPublicationYear 2006 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Percy Jackson and the Sea of Monsters" .
+
+lib:PercyJackson3 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Percy Jackson and the Titan's Curse" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:RickRiordan ;
+    lib:hasDescription "Percy must rescue the goddess Artemis and his friend Annabeth." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-2007-1896-5" ;
+    lib:hasPageCount 312 ;
+    lib:hasPublicationYear 2007 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Percy Jackson and the Titan's Curse" .
+
+lib:PerksWallflower a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Perks of Being a Wallflower" ;
+    lib:forAgeGroup lib:YoungAdult ;
+    lib:hasAuthor lib:StephenChbosky ;
+    lib:hasDescription "A shy freshman navigates high school, friendship, and first love." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:RomanceInstance ;
+    lib:hasISBN "978-0-1999-0883-1" ;
+    lib:hasPageCount 213 ;
+    lib:hasPublicationYear 1999 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Perks of Being a Wallflower" .
+
+lib:PetSematary a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Pet Sematary" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:StephenKing ;
+    lib:hasDescription "A family discovers a burial ground that brings the dead back to life." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:HorrorInstance ;
+    lib:hasISBN "978-0-1983-2964-2" ;
+    lib:hasPageCount 374 ;
+    lib:hasPublicationYear 1983 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Pet Sematary" .
+
+lib:PhilosophyInstance a lib:Philosophy,
+        owl:NamedIndividual ;
+    rdfs:label "Philosophy" .
+
+lib:Poetry a owl:Class ;
+    rdfs:subClassOf lib:FictionBook .
+
+lib:PridePreju a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Pride and Prejudice" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:JaneAusten ;
+    lib:hasDescription "Elizabeth Bennet navigates society, family, and love in Regency England." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:RomanceInstance ;
+    lib:hasISBN "978-0-1813-3067-9" ;
+    lib:hasPageCount 432 ;
+    lib:hasPublicationYear 1813 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Pride and Prejudice" .
+
+lib:RamonaQuimby a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Ramona Quimby, Age 8" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:BeverleyCleary ;
+    lib:hasDescription "Ramona navigates the challenges of third grade and family life." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:AdventureInstance ;
+    lib:hasISBN "978-0-1981-3183-0" ;
+    lib:hasPageCount 190 ;
+    lib:hasPublicationYear 1981 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Ramona Quimby, Age 8" .
+
+lib:RedwallBook a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Redwall" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:BrianJacques ;
+    lib:hasDescription "A young mouse must defend Redwall Abbey from the evil rat Cluny the Scourge." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1986-1954-7" ;
+    lib:hasPageCount 351 ;
+    lib:hasPublicationYear 1986 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Redwall" .
+
+lib:Reference a owl:Class ;
+    rdfs:subClassOf lib:NonFictionBook .
+
+lib:Sapiens a lib:NonFictionBook,
+        owl:NamedIndividual ;
+    rdfs:label "Sapiens: A Brief History of Humankind" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:YuvalHarari ;
+    lib:hasDescription "The history of humankind from the Stone Age to the present." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:HistoryInstance ;
+    lib:hasISBN "978-0-2011-4459-7" ;
+    lib:hasPageCount 443 ;
+    lib:hasPublicationYear 2011 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Sapiens: A Brief History of Humankind" .
+
+lib:SelfHelp a owl:Class ;
+    rdfs:subClassOf lib:NonFictionBook .
+
+lib:ShannonHale a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Shannon Hale" ;
+    lib:hasAuthorName "Shannon Hale" ;
+    lib:hasBirthYear 1974 ;
+    lib:hasNationality "American" .
+
+lib:ShortHistoryNearly a lib:NonFictionBook,
+        owl:NamedIndividual ;
+    rdfs:label "A Short History of Nearly Everything" ;
+    lib:forAgeGroup lib:YoungAdult ;
+    lib:hasAuthor lib:BillBryson ;
+    lib:hasDescription "An accessible guide to science from the Big Bang to the rise of civilization." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:ScienceInstance ;
+    lib:hasISBN "978-0-2003-7664-6" ;
+    lib:hasPageCount 544 ;
+    lib:hasPublicationYear 2003 ;
+    lib:hasStatus lib:Reserved ;
+    lib:hasTitle "A Short History of Nearly Everything" .
+
+lib:ShortStoryCollection a owl:Class ;
+    rdfs:subClassOf lib:FictionBook .
+
+lib:SilenceOfLambs a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Silence of the Lambs" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:ThomasHarris ;
+    lib:hasDescription "An FBI trainee seeks help from an imprisoned cannibal to catch a serial killer." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:ThrillerInstance ;
+    lib:hasISBN "978-0-1988-8919-4" ;
+    lib:hasPageCount 352 ;
+    lib:hasPublicationYear 1988 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Silence of the Lambs" .
+
+lib:SixOfCrows a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Six of Crows" ;
+    lib:forAgeGroup lib:YoungAdult ;
+    lib:hasAuthor lib:LeighBardugo ;
+    lib:hasDescription "A crew of dangerous outcasts attempts an impossible heist in a fantasy world." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-2015-8926-2" ;
+    lib:hasPageCount 465 ;
+    lib:hasPublicationYear 2015 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Six of Crows" .
+
+lib:SmallGodsBook a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Small Gods" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:TerryPratchett ;
+    lib:hasDescription "A satirical fantasy about faith, religion, and the power of belief." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1992-8728-0" ;
+    lib:hasPageCount 389 ;
+    lib:hasPublicationYear 1992 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Small Gods" .
+
+lib:SongAchilles a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Song of Achilles" ;
+    lib:forAgeGroup lib:YoungAdult ;
+    lib:hasAuthor lib:MadelineMiller ;
+    lib:hasDescription "A retelling of the Iliad through the eyes of Patroclus, companion to Achilles." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:HistoricalFictionInstance ;
+    lib:hasISBN "978-0-2011-5475-0" ;
+    lib:hasPageCount 352 ;
+    lib:hasPublicationYear 2011 ;
+    lib:hasStatus lib:Reserved ;
+    lib:hasTitle "The Song of Achilles" .
+
+lib:SportsInstance a lib:Sports,
+        owl:NamedIndividual ;
+    rdfs:label "Sports" .
+
+lib:SteveJobs a lib:Biography,
+        owl:NamedIndividual ;
+    rdfs:label "Steve Jobs" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:WalterIsaacson ;
+    lib:hasDescription "The authorized biography of Apple co-founder Steve Jobs." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:BiographyGenreInstance ;
+    lib:hasISBN "978-0-2011-4191-0" ;
+    lib:hasPageCount 656 ;
+    lib:hasPublicationYear 2011 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Steve Jobs" .
+
+lib:StuartLittle a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Stuart Little" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:EBWhite ;
+    lib:hasDescription "A tiny mouse born to a human family has big adventures in New York City." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1945-7020-3" ;
+    lib:hasPageCount 131 ;
+    lib:hasPublicationYear 1945 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Stuart Little" .
+
+lib:TamoraPrice a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Tamora Pierce" ;
+    lib:hasAuthorName "Tamora Pierce" ;
+    lib:hasBirthYear 1954 ;
+    lib:hasNationality "American" .
+
+lib:TheFirm a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Firm" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:JohnGrisham ;
+    lib:hasDescription "A young lawyer discovers his firm is involved with the mob." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:ThrillerInstance ;
+    lib:hasISBN "978-0-1991-7663-8" ;
+    lib:hasPageCount 421 ;
+    lib:hasPublicationYear 1991 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Firm" .
+
+lib:TheGiver a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Giver" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:LoisLowry ;
+    lib:hasDescription "In a seemingly perfect society, Jonas discovers the dark truth behind his community." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:ScienceFictionInstance ;
+    lib:hasISBN "978-0-1993-9493-9" ;
+    lib:hasPageCount 240 ;
+    lib:hasPublicationYear 1993 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Giver" .
+
+lib:TheNotebook a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Notebook" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:NicholasSparks ;
+    lib:hasDescription "An elderly man reads a love story to a woman suffering from Alzheimer's." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:RomanceInstance ;
+    lib:hasISBN "978-0-1996-4675-2" ;
+    lib:hasPageCount 214 ;
+    lib:hasPublicationYear 1996 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Notebook" .
+
+lib:TheShining a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Shining" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:StephenKing ;
+    lib:hasDescription "A family becomes trapped in a haunted hotel during winter." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:HorrorInstance ;
+    lib:hasISBN "978-0-1977-1983-1" ;
+    lib:hasPageCount 447 ;
+    lib:hasPublicationYear 1977 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Shining" .
+
+lib:TomSawyer a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Adventures of Tom Sawyer" ;
+    lib:forAgeGroup lib:Adult ;
+    lib:hasAuthor lib:MarkTwain ;
+    lib:hasDescription "A mischievous boy has adventures along the Mississippi River." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:AdventureInstance ;
+    lib:hasISBN "978-0-1876-0894-8" ;
+    lib:hasPageCount 274 ;
+    lib:hasPublicationYear 1876 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Adventures of Tom Sawyer" .
+
+lib:TrumpetSwan a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Trumpet of the Swan" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:EBWhite ;
+    lib:hasDescription "A voiceless trumpeter swan learns to play a trumpet to win the love of a female swan." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1970-4633-3" ;
+    lib:hasPageCount 252 ;
+    lib:hasPublicationYear 1970 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Trumpet of the Swan" .
+
+lib:Twilight a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Twilight" ;
+    lib:forAgeGroup lib:YoungAdult ;
+    lib:hasAuthor lib:StephenieMeyer ;
+    lib:hasDescription "Bella falls in love with a vampire in a small Washington town." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:RomanceInstance ;
+    lib:hasISBN "978-0-2005-8836-8" ;
+    lib:hasPageCount 498 ;
+    lib:hasPublicationYear 2005 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Twilight" .
+
+lib:TwitsBook a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Twits" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:RoaldDahl ;
+    lib:hasDescription "A nasty couple play mean tricks on each other and get their comeuppance." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1980-7391-9" ;
+    lib:hasPageCount 96 ;
+    lib:hasPublicationYear 1980 ;
+    lib:hasStatus lib:CheckedOut ;
+    lib:hasTitle "The Twits" .
+
+lib:VeryHungryCaterpillar a lib:FictionBook,
+        owl:NamedIndividual ;
+    rdfs:label "The Very Hungry Caterpillar" ;
+    lib:forAgeGroup lib:EarlyChildhood ;
+    lib:hasAuthor lib:EricCarle ;
+    lib:hasDescription "A caterpillar eats through various foods before becoming a beautiful butterfly." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1969-6452-7" ;
+    lib:hasPageCount 26 ;
+    lib:hasPublicationYear 1969 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Very Hungry Caterpillar" .
+
+lib:WayKings a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Way of Kings" ;
+    lib:forAgeGroup lib:YoungAdult ;
+    lib:hasAuthor lib:BrandonSanderson ;
+    lib:hasDescription "In a world of storms, an ancient power awakens." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-2010-0794-6" ;
+    lib:hasPageCount 1007 ;
+    lib:hasPublicationYear 2010 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Way of Kings" .
+
+lib:WhereWildThings a lib:FictionBook,
+        owl:NamedIndividual ;
+    rdfs:label "Where the Wild Things Are" ;
+    lib:forAgeGroup lib:EarlyChildhood ;
+    lib:hasAuthor lib:MauriceSendak ;
+    lib:hasDescription "Max sails to an island of Wild Things where he becomes their king." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1963-8755-5" ;
+    lib:hasPageCount 48 ;
+    lib:hasPublicationYear 1963 ;
+    lib:hasStatus lib:CheckedOut ;
+    lib:hasTitle "Where the Wild Things Are" .
+
+lib:WhoWasEinstein a lib:Biography,
+        owl:NamedIndividual ;
+    rdfs:label "Who Was Albert Einstein?" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:JessBrellier ;
+    lib:hasDescription "A biography of Einstein written for young readers." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:BiographyGenreInstance ;
+    lib:hasISBN "978-0-2002-1664-4" ;
+    lib:hasPageCount 112 ;
+    lib:hasPublicationYear 2002 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Who Was Albert Einstein?" .
+
+lib:WimpyKid2 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Diary of a Wimpy Kid: Rodrick Rules" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:JeffKinney ;
+    lib:hasDescription "Greg's older brother makes his life miserable." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:AdventureInstance ;
+    lib:hasISBN "978-0-2008-0060-5" ;
+    lib:hasPageCount 217 ;
+    lib:hasPublicationYear 2008 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Diary of a Wimpy Kid: Rodrick Rules" .
+
+lib:WingsOfFire1 a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "Wings of Fire: The Dragonet Prophecy" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:TuiTSutherland ;
+    lib:hasDescription "Five young dragons are destined to end a war, but first they must escape." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-2012-4639-6" ;
+    lib:hasPageCount 336 ;
+    lib:hasPublicationYear 2012 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "Wings of Fire: The Dragonet Prophecy" .
+
+lib:Witches a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "The Witches" ;
+    lib:forAgeGroup lib:Children ;
+    lib:hasAuthor lib:RoaldDahl ;
+    lib:hasDescription "A boy discovers a convention of witches plotting against children." ;
+    lib:hasFormat lib:Paperback ;
+    lib:hasGenre lib:FantasyInstance ;
+    lib:hasISBN "978-0-1983-7438-1" ;
+    lib:hasPageCount 208 ;
+    lib:hasPublicationYear 1983 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "The Witches" .
+
+lib:WrinkleTime a lib:Novel,
+        owl:NamedIndividual ;
+    rdfs:label "A Wrinkle in Time" ;
+    lib:forAgeGroup lib:MiddleGrade ;
+    lib:hasAuthor lib:MadeleineEngle ;
+    lib:hasDescription "Meg travels through space and time to rescue her father from evil forces." ;
+    lib:hasFormat lib:Hardcover ;
+    lib:hasGenre lib:ScienceFictionInstance ;
+    lib:hasISBN "978-0-1962-0160-7" ;
+    lib:hasPageCount 256 ;
+    lib:hasPublicationYear 1962 ;
+    lib:hasStatus lib:Available ;
+    lib:hasTitle "A Wrinkle in Time" .
+
+lib:forAgeGroup a owl:ObjectProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range lib:AgeGroup .
+
+lib:hasAgeGroupName a owl:DatatypeProperty ;
+    rdfs:domain lib:AgeGroup ;
+    rdfs:range xsd:string .
+
+lib:hasAuthor a owl:ObjectProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range lib:Author .
+
+lib:hasAuthorName a owl:DatatypeProperty ;
+    rdfs:domain lib:Author ;
+    rdfs:range xsd:string .
+
+lib:hasBirthYear a owl:DatatypeProperty ;
+    rdfs:domain lib:Author ;
+    rdfs:range xsd:integer .
+
+lib:hasDescription a owl:DatatypeProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range xsd:string .
+
+lib:hasFormat a owl:ObjectProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range lib:Format .
+
+lib:hasGenre a owl:ObjectProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range lib:Genre .
+
+lib:hasISBN a owl:DatatypeProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range xsd:string .
+
+lib:hasMaxAge a owl:DatatypeProperty ;
+    rdfs:domain lib:AgeGroup ;
+    rdfs:range xsd:integer .
+
+lib:hasMinAge a owl:DatatypeProperty ;
+    rdfs:domain lib:AgeGroup ;
+    rdfs:range xsd:integer .
+
+lib:hasNationality a owl:DatatypeProperty ;
+    rdfs:domain lib:Author ;
+    rdfs:range xsd:string .
+
+lib:hasPageCount a owl:DatatypeProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range xsd:integer .
+
+lib:hasPublicationYear a owl:DatatypeProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range xsd:integer .
+
+lib:hasStatus a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range lib:AvailabilityStatus .
+
+lib:hasTitle a owl:DatatypeProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range xsd:string .
+
+lib:relatedTo a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range lib:Book .
+
+lib:writtenBy a owl:ObjectProperty ;
+    rdfs:domain lib:Book ;
+    rdfs:range lib:Author ;
+    owl:inverseOf lib:authorOf .
+
+lib:AaronBlabey a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Aaron Blabey" ;
+    lib:hasAuthorName "Aaron Blabey" ;
+    lib:hasBirthYear 1974 ;
+    lib:hasNationality "Australian" .
+
+lib:Adventure a owl:Class ;
+    rdfs:subClassOf lib:FictionGenre .
+
+lib:ArthurCClarke a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Arthur C. Clarke" ;
+    lib:hasAuthorName "Arthur C. Clarke" ;
+    lib:hasBirthYear 1917 ;
+    lib:hasNationality "British" .
+
+lib:Arts a owl:Class ;
+    rdfs:subClassOf lib:NonFictionGenre .
+
+lib:BeverleyCleary a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Beverly Cleary" ;
+    lib:hasAuthorName "Beverly Cleary" ;
+    lib:hasBirthYear 1916 ;
+    lib:hasNationality "American" .
+
+lib:BillBryson a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Bill Bryson" ;
+    lib:hasAuthorName "Bill Bryson" ;
+    lib:hasBirthYear 1951 ;
+    lib:hasNationality "American" .
+
+lib:BrandonMull a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Brandon Mull" ;
+    lib:hasAuthorName "Brandon Mull" ;
+    lib:hasBirthYear 1974 ;
+    lib:hasNationality "American" .
+
+lib:BrianJacques a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Brian Jacques" ;
+    lib:hasAuthorName "Brian Jacques" ;
+    lib:hasBirthYear 1939 ;
+    lib:hasNationality "British" .
+
+lib:CSLewis a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "C.S. Lewis" ;
+    lib:hasAuthorName "C.S. Lewis" ;
+    lib:hasBirthYear 1898 ;
+    lib:hasNationality "British" .
+
+lib:CarlSagan a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Carl Sagan" ;
+    lib:hasAuthorName "Carl Sagan" ;
+    lib:hasBirthYear 1934 ;
+    lib:hasNationality "American" .
+
+lib:ChrisColfer a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Chris Colfer" ;
+    lib:hasAuthorName "Chris Colfer" ;
+    lib:hasBirthYear 1990 ;
+    lib:hasNationality "American" .
+
+lib:CornelaFunke a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Cornelia Funke" ;
+    lib:hasAuthorName "Cornelia Funke" ;
+    lib:hasBirthYear 1958 ;
+    lib:hasNationality "German" .
+
+lib:DanBrown a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Dan Brown" ;
+    lib:hasAuthorName "Dan Brown" ;
+    lib:hasBirthYear 1964 ;
+    lib:hasNationality "American" .
+
+lib:DianneWynneJones a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Diana Wynne Jones" ;
+    lib:hasAuthorName "Diana Wynne Jones" ;
+    lib:hasBirthYear 1934 ;
+    lib:hasNationality "British" .
+
+lib:Fantasy a owl:Class ;
+    rdfs:subClassOf lib:FictionGenre .
+
+lib:FrankHerbert a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Frank Herbert" ;
+    lib:hasAuthorName "Frank Herbert" ;
+    lib:hasBirthYear 1920 ;
+    lib:hasNationality "American" .
+
+lib:GailCarsonLevine a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Gail Carson Levine" ;
+    lib:hasAuthorName "Gail Carson Levine" ;
+    lib:hasBirthYear 1947 ;
+    lib:hasNationality "American" .
+
+lib:GeorgeRRMartin a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "George R.R. Martin" ;
+    lib:hasAuthorName "George R.R. Martin" ;
+    lib:hasBirthYear 1948 ;
+    lib:hasNationality "American" .
+
+lib:GillianFlynn a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Gillian Flynn" ;
+    lib:hasAuthorName "Gillian Flynn" ;
+    lib:hasBirthYear 1971 ;
+    lib:hasNationality "American" .
+
+lib:HistoricalFiction a owl:Class ;
+    rdfs:subClassOf lib:FictionGenre .
+
+lib:History a owl:Class ;
+    rdfs:subClassOf lib:NonFictionGenre .
+
+lib:Horror a owl:Class ;
+    rdfs:subClassOf lib:FictionGenre .
+
+lib:IsaacAsimov a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Isaac Asimov" ;
+    lib:hasAuthorName "Isaac Asimov" ;
+    lib:hasBirthYear 1920 ;
+    lib:hasNationality "American" .
+
+lib:JamesDashner a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "James Dashner" ;
+    lib:hasAuthorName "James Dashner" ;
+    lib:hasBirthYear 1972 ;
+    lib:hasNationality "American" .
+
+lib:JaneAusten a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Jane Austen" ;
+    lib:hasAuthorName "Jane Austen" ;
+    lib:hasBirthYear 1775 ;
+    lib:hasNationality "British" .
+
+lib:JessBrellier a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Jess M. Brallier" ;
+    lib:hasAuthorName "Jess M. Brallier" ;
+    lib:hasBirthYear 1953 ;
+    lib:hasNationality "American" .
+
+lib:JoannaCole a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Joanna Cole" ;
+    lib:hasAuthorName "Joanna Cole" ;
+    lib:hasBirthYear 1944 ;
+    lib:hasNationality "American" .
+
+lib:JohnGreen a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "John Green" ;
+    lib:hasAuthorName "John Green" ;
+    lib:hasBirthYear 1977 ;
+    lib:hasNationality "American" .
+
+lib:JohnGrisham a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "John Grisham" ;
+    lib:hasAuthorName "John Grisham" ;
+    lib:hasBirthYear 1955 ;
+    lib:hasNationality "American" .
+
+lib:KatherinePaterson a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Katherine Paterson" ;
+    lib:hasAuthorName "Katherine Paterson" ;
+    lib:hasBirthYear 1932 ;
+    lib:hasNationality "American" .
+
+lib:LeighBardugo a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Leigh Bardugo" ;
+    lib:hasAuthorName "Leigh Bardugo" ;
+    lib:hasBirthYear 1975 ;
+    lib:hasNationality "American" .
+
+lib:LouisSachar a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Louis Sachar" ;
+    lib:hasAuthorName "Louis Sachar" ;
+    lib:hasBirthYear 1954 ;
+    lib:hasNationality "American" .
+
+lib:MadeleineEngle a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Madeleine L'Engle" ;
+    lib:hasAuthorName "Madeleine L'Engle" ;
+    lib:hasBirthYear 1918 ;
+    lib:hasNationality "American" .
+
+lib:MadelineMiller a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Madeline Miller" ;
+    lib:hasAuthorName "Madeline Miller" ;
+    lib:hasBirthYear 1978 ;
+    lib:hasNationality "American" .
+
+lib:MalalaYousafzai a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Malala Yousafzai" ;
+    lib:hasAuthorName "Malala Yousafzai" ;
+    lib:hasBirthYear 1997 ;
+    lib:hasNationality "Pakistani" .
+
+lib:MalcolmGladwell a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Malcolm Gladwell" ;
+    lib:hasAuthorName "Malcolm Gladwell" ;
+    lib:hasBirthYear 1963 ;
+    lib:hasNationality "Canadian" .
+
+lib:MargotShetterly a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Margot Lee Shetterly" ;
+    lib:hasAuthorName "Margot Lee Shetterly" ;
+    lib:hasBirthYear 1969 ;
+    lib:hasNationality "American" .
+
+lib:MaryPopeOsborne a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Mary Pope Osborne" ;
+    lib:hasAuthorName "Mary Pope Osborne" ;
+    lib:hasBirthYear 1949 ;
+    lib:hasNationality "American" .
+
+lib:MichaelEnde a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Michael Ende" ;
+    lib:hasAuthorName "Michael Ende" ;
+    lib:hasBirthYear 1929 ;
+    lib:hasNationality "German" .
+
+lib:MichelleObama a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Michelle Obama" ;
+    lib:hasAuthorName "Michelle Obama" ;
+    lib:hasBirthYear 1964 ;
+    lib:hasNationality "American" .
+
+lib:Mystery a owl:Class ;
+    rdfs:subClassOf lib:FictionGenre .
+
+lib:Nature a owl:Class ;
+    rdfs:subClassOf lib:NonFictionGenre .
+
+lib:NatureInstance a lib:Nature,
+        owl:NamedIndividual ;
+    rdfs:label "Nature" .
+
+lib:NicholasSparks a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Nicholas Sparks" ;
+    lib:hasAuthorName "Nicholas Sparks" ;
+    lib:hasBirthYear 1965 ;
+    lib:hasNationality "American" .
+
+lib:OrsonScottCard a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Orson Scott Card" ;
+    lib:hasAuthorName "Orson Scott Card" ;
+    lib:hasBirthYear 1951 ;
+    lib:hasNationality "American" .
+
+lib:PatrickRothfuss a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Patrick Rothfuss" ;
+    lib:hasAuthorName "Patrick Rothfuss" ;
+    lib:hasBirthYear 1973 ;
+    lib:hasNationality "American" .
+
+lib:Person a owl:Class .
+
+lib:PhilipPullman a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Philip Pullman" ;
+    lib:hasAuthorName "Philip Pullman" ;
+    lib:hasBirthYear 1946 ;
+    lib:hasNationality "British" .
+
+lib:Philosophy a owl:Class ;
+    rdfs:subClassOf lib:NonFictionGenre .
+
+lib:RayBradbury a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Ray Bradbury" ;
+    lib:hasAuthorName "Ray Bradbury" ;
+    lib:hasBirthYear 1920 ;
+    lib:hasNationality "American" .
+
+lib:Romance a owl:Class ;
+    rdfs:subClassOf lib:FictionGenre .
+
+lib:Science a owl:Class ;
+    rdfs:subClassOf lib:NonFictionGenre .
+
+lib:ScienceFiction a owl:Class ;
+    rdfs:subClassOf lib:FictionGenre .
+
+lib:Sports a owl:Class ;
+    rdfs:subClassOf lib:NonFictionGenre .
+
+lib:StephenChbosky a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Stephen Chbosky" ;
+    lib:hasAuthorName "Stephen Chbosky" ;
+    lib:hasBirthYear 1970 ;
+    lib:hasNationality "American" .
+
+lib:StephenHawking a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Stephen Hawking" ;
+    lib:hasAuthorName "Stephen Hawking" ;
+    lib:hasBirthYear 1942 ;
+    lib:hasNationality "British" .
+
+lib:StephenieMeyer a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Stephenie Meyer" ;
+    lib:hasAuthorName "Stephenie Meyer" ;
+    lib:hasBirthYear 1973 ;
+    lib:hasNationality "American" .
+
+lib:StiegLarsson a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Stieg Larsson" ;
+    lib:hasAuthorName "Stieg Larsson" ;
+    lib:hasBirthYear 1954 ;
+    lib:hasNationality "Swedish" .
+
+lib:Technology a owl:Class ;
+    rdfs:subClassOf lib:NonFictionGenre .
+
+lib:TechnologyInstance a lib:Technology,
+        owl:NamedIndividual ;
+    rdfs:label "Technology" .
+
+lib:TerryPratchett a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Terry Pratchett" ;
+    lib:hasAuthorName "Terry Pratchett" ;
+    lib:hasBirthYear 1948 ;
+    lib:hasNationality "British" .
+
+lib:ThomasHarris a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Thomas Harris" ;
+    lib:hasAuthorName "Thomas Harris" ;
+    lib:hasBirthYear 1940 ;
+    lib:hasNationality "American" .
+
+lib:Thriller a owl:Class ;
+    rdfs:subClassOf lib:FictionGenre .
+
+lib:TraceaWest a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Tracey West" ;
+    lib:hasAuthorName "Tracey West" ;
+    lib:hasBirthYear 1965 ;
+    lib:hasNationality "American" .
+
+lib:TuiTSutherland a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Tui T. Sutherland" ;
+    lib:hasAuthorName "Tui T. Sutherland" ;
+    lib:hasBirthYear 1978 ;
+    lib:hasNationality "American" .
+
+lib:UrsulaLeGuin a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Ursula K. Le Guin" ;
+    lib:hasAuthorName "Ursula K. Le Guin" ;
+    lib:hasBirthYear 1929 ;
+    lib:hasNationality "American" .
+
+lib:VeronicaRoth a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Veronica Roth" ;
+    lib:hasAuthorName "Veronica Roth" ;
+    lib:hasBirthYear 1988 ;
+    lib:hasNationality "American" .
+
+lib:WalterIsaacson a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Walter Isaacson" ;
+    lib:hasAuthorName "Walter Isaacson" ;
+    lib:hasBirthYear 1952 ;
+    lib:hasNationality "American" .
+
+lib:WilliamGibson a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "William Gibson" ;
+    lib:hasAuthorName "William Gibson" ;
+    lib:hasBirthYear 1948 ;
+    lib:hasNationality "American" .
+
+lib:YuvalHarari a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Yuval Noah Harari" ;
+    lib:hasAuthorName "Yuval Noah Harari" ;
+    lib:hasBirthYear 1976 ;
+    lib:hasNationality "Israeli" .
+
+lib:authorOf a owl:ObjectProperty ;
+    rdfs:domain lib:Author ;
+    rdfs:range lib:Book .
+
+lib:BrandonSanderson a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Brandon Sanderson" ;
+    lib:hasAuthorName "Brandon Sanderson" ;
+    lib:hasBirthYear 1975 ;
+    lib:hasNationality "American" .
+
+lib:DavPilkey a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Dav Pilkey" ;
+    lib:hasAuthorName "Dav Pilkey" ;
+    lib:hasBirthYear 1966 ;
+    lib:hasNationality "American" .
+
+lib:EricCarle a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Eric Carle" ;
+    lib:hasAuthorName "Eric Carle" ;
+    lib:hasBirthYear 1929 ;
+    lib:hasNationality "American" .
+
+lib:GeorgeOrwell a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "George Orwell" ;
+    lib:hasAuthorName "George Orwell" ;
+    lib:hasBirthYear 1903 ;
+    lib:hasNationality "British" .
+
+lib:HistoricalFictionInstance a lib:HistoricalFiction,
+        owl:NamedIndividual ;
+    rdfs:label "HistoricalFiction" .
+
+lib:HistoryInstance a lib:History,
+        owl:NamedIndividual ;
+    rdfs:label "History" .
+
+lib:JeffKinney a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Jeff Kinney" ;
+    lib:hasAuthorName "Jeff Kinney" ;
+    lib:hasBirthYear 1971 ;
+    lib:hasNationality "American" .
+
+lib:LoisLowry a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Lois Lowry" ;
+    lib:hasAuthorName "Lois Lowry" ;
+    lib:hasBirthYear 1937 ;
+    lib:hasNationality "American" .
+
+lib:MarkTwain a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Mark Twain" ;
+    lib:hasAuthorName "Mark Twain" ;
+    lib:hasBirthYear 1835 ;
+    lib:hasNationality "American" .
+
+lib:MauriceSendak a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Maurice Sendak" ;
+    lib:hasAuthorName "Maurice Sendak" ;
+    lib:hasBirthYear 1928 ;
+    lib:hasNationality "American" .
+
+lib:NatGeoKids a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "National Geographic Kids" ;
+    lib:hasAuthorName "National Geographic Kids" ;
+    lib:hasBirthYear 1975 ;
+    lib:hasNationality "American" .
+
+lib:AgathaChristie a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Agatha Christie" ;
+    lib:hasAuthorName "Agatha Christie" ;
+    lib:hasBirthYear 1890 ;
+    lib:hasNationality "British" .
+
+lib:EBWhite a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "E.B. White" ;
+    lib:hasAuthorName "E.B. White" ;
+    lib:hasBirthYear 1899 ;
+    lib:hasNationality "American" .
+
+lib:Educational a owl:Class ;
+    rdfs:subClassOf lib:NonFictionBook .
+
+lib:Genre a owl:Class .
+
+lib:MysteryInstance a lib:Mystery,
+        owl:NamedIndividual ;
+    rdfs:label "Mystery" .
+
+lib:NeilGaiman a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Neil Gaiman" ;
+    lib:hasAuthorName "Neil Gaiman" ;
+    lib:hasBirthYear 1960 ;
+    lib:hasNationality "British" .
+
+lib:SuzanneCollins a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Suzanne Collins" ;
+    lib:hasAuthorName "Suzanne Collins" ;
+    lib:hasBirthYear 1962 ;
+    lib:hasNationality "American" .
+
+lib:AvailabilityStatus a owl:Class .
+
+lib:Biography a owl:Class ;
+    rdfs:subClassOf lib:NonFictionBook .
+
+lib:JKRowling a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "J.K. Rowling" ;
+    lib:hasAuthorName "J.K. Rowling" ;
+    lib:hasBirthYear 1965 ;
+    lib:hasNationality "British" .
+
+lib:JRRTolkien a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "J.R.R. Tolkien" ;
+    lib:hasAuthorName "J.R.R. Tolkien" ;
+    lib:hasBirthYear 1892 ;
+    lib:hasNationality "British" .
+
+lib:RickRiordan a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Rick Riordan" ;
+    lib:hasAuthorName "Rick Riordan" ;
+    lib:hasBirthYear 1964 ;
+    lib:hasNationality "American" .
+
+lib:StephenKing a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Stephen King" ;
+    lib:hasAuthorName "Stephen King" ;
+    lib:hasBirthYear 1947 ;
+    lib:hasNationality "American" .
+
+lib:Format a owl:Class .
+
+lib:HorrorInstance a lib:Horror,
+        owl:NamedIndividual ;
+    rdfs:label "Horror" .
+
+lib:RomanceInstance a lib:Romance,
+        owl:NamedIndividual ;
+    rdfs:label "Romance" .
+
+lib:ScienceInstance a lib:Science,
+        owl:NamedIndividual ;
+    rdfs:label "Science" .
+
+lib:ThrillerInstance a lib:Thriller,
+        owl:NamedIndividual ;
+    rdfs:label "Thriller" .
+
+lib:DrSeuss a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Dr. Seuss" ;
+    lib:hasAuthorName "Dr. Seuss" ;
+    lib:hasBirthYear 1904 ;
+    lib:hasNationality "American" .
+
+lib:Reserved a lib:AvailabilityStatus,
+        owl:NamedIndividual ;
+    rdfs:label "Reserved" .
+
+lib:RoaldDahl a lib:Author,
+        owl:NamedIndividual ;
+    rdfs:label "Roald Dahl" ;
+    lib:hasAuthorName "Roald Dahl" ;
+    lib:hasBirthYear 1916 ;
+    lib:hasNationality "British" .
+
+lib:FictionGenre a owl:Class ;
+    rdfs:subClassOf lib:Genre .
+
+lib:NonFictionGenre a owl:Class ;
+    rdfs:subClassOf lib:Genre .
+
+lib:AgeGroup a owl:Class .
+
+lib:AdventureInstance a lib:Adventure,
+        owl:NamedIndividual ;
+    rdfs:label "Adventure" .
+
+lib:EarlyChildhood a lib:AgeGroup,
+        owl:NamedIndividual ;
+    rdfs:label "Early Childhood (0-5)" ;
+    lib:hasAgeGroupName "Early Childhood (0-5)" ;
+    lib:hasMaxAge 5 ;
+    lib:hasMinAge 0 .
+
+lib:NonFictionBook a owl:Class ;
+    rdfs:subClassOf lib:Book .
+
+lib:CheckedOut a lib:AvailabilityStatus,
+        owl:NamedIndividual ;
+    rdfs:label "CheckedOut" .
+
+lib:FictionBook a owl:Class ;
+    rdfs:subClassOf lib:Book .
+
+lib:ScienceFictionInstance a lib:ScienceFiction,
+        owl:NamedIndividual ;
+    rdfs:label "ScienceFiction" .
+
+lib:Book a owl:Class .
+
+lib:YoungAdult a lib:AgeGroup,
+        owl:NamedIndividual ;
+    rdfs:label "Young Adult (13-17)" ;
+    lib:hasAgeGroupName "Young Adult (13-17)" ;
+    lib:hasMaxAge 17 ;
+    lib:hasMinAge 13 .
+
+lib:MiddleGrade a lib:AgeGroup,
+        owl:NamedIndividual ;
+    rdfs:label "Middle Grade (9-12)" ;
+    lib:hasAgeGroupName "Middle Grade (9-12)" ;
+    lib:hasMaxAge 12 ;
+    lib:hasMinAge 9 .
+
+lib:Children a lib:AgeGroup,
+        owl:NamedIndividual ;
+    rdfs:label "Children (6-8)" ;
+    lib:hasAgeGroupName "Children (6-8)" ;
+    lib:hasMaxAge 8 ;
+    lib:hasMinAge 6 .
+
+lib:Adult a lib:AgeGroup,
+        owl:NamedIndividual ;
+    rdfs:label "Adult (18+)" ;
+    lib:hasAgeGroupName "Adult (18+)" ;
+    lib:hasMaxAge 99 ;
+    lib:hasMinAge 18 .
+
+lib:Hardcover a lib:Format,
+        owl:NamedIndividual ;
+    rdfs:label "Hardcover" .
+
+lib:FantasyInstance a lib:Fantasy,
+        owl:NamedIndividual ;
+    rdfs:label "Fantasy" .
+
+lib:Paperback a lib:Format,
+        owl:NamedIndividual ;
+    rdfs:label "Paperback" .
+
+lib:Author a owl:Class ;
+    rdfs:subClassOf lib:Person .
+
+lib:Novel a owl:Class ;
+    rdfs:subClassOf lib:FictionBook .
+
+lib:Available a lib:AvailabilityStatus,
+        owl:NamedIndividual ;
+    rdfs:label "Available" .
+

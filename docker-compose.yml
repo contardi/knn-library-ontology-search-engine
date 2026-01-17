@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+      - ./ontology:/app/ontology
+    environment:
+      - FLASK_APP=app/app.py
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+    working_dir: /app
