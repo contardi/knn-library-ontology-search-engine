@@ -189,9 +189,8 @@ The `images/` folder contains documentation screenshots:
 
 
 ## Demo
-[WebM Format](/demo/demo-protege-web-app.webm)  
-![Demo](/demo/demo-protege-web-app.webm)
 
+[WebM Format](/demo/demo-protege-web-app.webm)
 
 ## License
 
