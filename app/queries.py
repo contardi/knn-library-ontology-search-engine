@@ -3,10 +3,110 @@ SPARQL query functions and natural language parser for the Library Search Engine
 """
 
 import re
+from difflib import SequenceMatcher
 from rdflib import Graph, Namespace
 from rdflib.plugins.sparql import prepareQuery
 
 LIB = Namespace("http://example.org/library#")
+
+# Stop words to ignore in searches
+STOP_WORDS = {
+    'the', 'a', 'an', 'and', 'or', 'but', 'is', 'are', 'was', 'were',
+    'books', 'book', 'for', 'with', 'by', 'of', 'in', 'to', 'on', 'at',
+    'it', 'its', 'this', 'that', 'from', 'about', 'into', 'be', 'been',
+    'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
+    'should', 'may', 'might', 'must', 'can', 'as', 'if', 'than', 'then'
+}
+
+
+def tokenize_query(query: str) -> list[str]:
+    """
+    Tokenize a query into individual words, removing stop words and short words.
+    """
+    words = re.findall(r'\b\w+\b', query.lower())
+    return [w for w in words if w not in STOP_WORDS and len(w) > 2]
+
+
+def calculate_relevance_score(book: dict, query_terms: list[str]) -> int:
+    """
+    Calculate a relevance score for a book based on query terms.
+    Higher scores indicate better matches.
+    """
+    score = 0
+    title_lower = book.get("title", "").lower()
+    author_lower = book.get("author", "").lower()
+    description_lower = book.get("description", "").lower()
+
+    for term in query_terms:
+        term_lower = term.lower()
+        # Title exact match (title equals the term)
+        if title_lower == term_lower:
+            score += 100
+        # Title contains the term
+        elif term_lower in title_lower:
+            score += 50
+
+        # Author match
+        if term_lower in author_lower:
+            score += 40
+
+        # Description match
+        if term_lower in description_lower:
+            score += 10
+
+    return score
+
+
+def find_similar(query: str, candidates: list[str], threshold: float = 0.5) -> list[tuple[str, float]]:
+    """
+    Find similar strings to the query using fuzzy matching.
+    Returns list of (candidate, similarity_ratio) tuples sorted by similarity.
+    """
+    matches = []
+    query_lower = query.lower()
+
+    for candidate in candidates:
+        ratio = SequenceMatcher(None, query_lower, candidate.lower()).ratio()
+        if ratio >= threshold:
+            matches.append((candidate, ratio))
+
+    return sorted(matches, key=lambda x: x[1], reverse=True)[:5]
+
+
+def highlight_matches(text: str, terms: list[str]) -> str:
+    """
+    Wrap matched terms in <mark> tags for highlighting.
+    """
+    if not text or not terms:
+        return text
+
+    result = text
+    for term in terms:
+        if term:
+            pattern = re.compile(re.escape(term), re.IGNORECASE)
+            result = pattern.sub(lambda m: f'<mark>{m.group()}</mark>', result)
+
+    return result
+
+
+def get_all_titles_and_authors(g: Graph) -> tuple[list[str], list[str]]:
+    """
+    Get all book titles and author names for fuzzy matching suggestions.
+    """
+    titles_query = """
+    PREFIX lib: <http://example.org/library#>
+    SELECT DISTINCT ?title WHERE { ?book lib:hasTitle ?title . }
+    """
+
+    authors_query = """
+    PREFIX lib: <http://example.org/library#>
+    SELECT DISTINCT ?authorName WHERE { ?author lib:hasAuthorName ?authorName . }
+    """
+
+    titles = [str(row.title) for row in g.query(titles_query)]
+    authors = [str(row.authorName) for row in g.query(authors_query)]
+
+    return titles, authors
 
 # Genre mappings for natural language parsing
 FICTION_GENRES = [
@@ -217,10 +317,36 @@ def build_sparql_query(params: dict) -> str:
     if params.get("status"):
         where_clauses.append(f"?book lib:hasStatus lib:{params['status']} .")
 
-    # Add title keyword filter
+    # Add multi-field keyword filter (title, description, author)
     if params.get("title_keywords"):
-        title_search = params["title_keywords"].replace("'", "\\'")
-        filters.append(f"FILTER(CONTAINS(LCASE(?title), LCASE('{title_search}')))")
+        search_text = params["title_keywords"]
+        # Tokenize the search text and filter stop words
+        tokens = tokenize_query(search_text)
+
+        if tokens:
+            # Build OR conditions for each token across multiple fields
+            token_filters = []
+            for token in tokens:
+                token_escaped = token.replace("'", "\\'")
+                token_filter = f"""(
+                    CONTAINS(LCASE(?title), LCASE('{token_escaped}')) ||
+                    CONTAINS(LCASE(COALESCE(?description, '')), LCASE('{token_escaped}')) ||
+                    CONTAINS(LCASE(COALESCE(?authorName, '')), LCASE('{token_escaped}'))
+                )"""
+                token_filters.append(token_filter)
+
+            # Combine token filters with OR (any token can match)
+            if token_filters:
+                combined_filter = " || ".join(token_filters)
+                filters.append(f"FILTER({combined_filter})")
+        else:
+            # If no tokens after filtering, use the original search text
+            title_search = search_text.replace("'", "\\'")
+            filters.append(f"""FILTER(
+                CONTAINS(LCASE(?title), LCASE('{title_search}')) ||
+                CONTAINS(LCASE(COALESCE(?description, '')), LCASE('{title_search}')) ||
+                CONTAINS(LCASE(COALESCE(?authorName, '')), LCASE('{title_search}'))
+            )""")
 
     # Build the query
     query = f"""
@@ -241,13 +367,19 @@ def build_sparql_query(params: dict) -> str:
     return query
 
 
-def search_books(g: Graph, query_text: str) -> list:
+def search_books(g: Graph, query_text: str, page: int = 1, per_page: int = 12) -> dict:
     """
     Search books using natural language query.
-    Returns a list of book dictionaries.
+    Returns a dict with results, pagination info, and suggestions.
     """
     params = parse_natural_language_query(query_text)
     sparql_query = build_sparql_query(params)
+
+    # Get query terms for relevance scoring and highlighting
+    query_terms = tokenize_query(query_text)
+    if not query_terms:
+        # Fall back to the original query if no tokens after filtering
+        query_terms = [query_text.strip()]
 
     results = []
     for row in g.query(sparql_query):
@@ -261,9 +393,50 @@ def search_books(g: Graph, query_text: str) -> list:
             "description": str(row.description) if row.description else "",
             "status": str(row.status) if row.status else "Unknown",
         }
+        # Calculate relevance score
+        book["_score"] = calculate_relevance_score(book, query_terms)
         results.append(book)
 
-    return results, params
+    # Sort by relevance score (descending), then by title
+    results.sort(key=lambda x: (-x["_score"], x["title"]))
+
+    # Generate suggestions if no results found
+    suggestions = []
+    if not results:
+        titles, authors = get_all_titles_and_authors(g)
+        all_candidates = titles + authors
+
+        # Find similar matches for the query
+        similar_matches = find_similar(query_text, all_candidates, threshold=0.4)
+        suggestions = [match[0] for match in similar_matches]
+
+    # Calculate pagination
+    total_count = len(results)
+    total_pages = (total_count + per_page - 1) // per_page if total_count > 0 else 1
+    start = (page - 1) * per_page
+    end = start + per_page
+    paginated_results = results[start:end]
+
+    # Add highlighted versions of title and description
+    for book in paginated_results:
+        book["title_highlighted"] = highlight_matches(book["title"], query_terms)
+        book["description_highlighted"] = highlight_matches(book["description"], query_terms)
+        book["author_highlighted"] = highlight_matches(book["author"], query_terms)
+
+    return {
+        "results": paginated_results,
+        "params": params,
+        "query_terms": query_terms,
+        "suggestions": suggestions,
+        "pagination": {
+            "page": page,
+            "per_page": per_page,
+            "total_count": total_count,
+            "total_pages": total_pages,
+            "has_prev": page > 1,
+            "has_next": page < total_pages,
+        }
+    }
 
 
 def get_all_books(g: Graph, limit: int = 50) -> list:

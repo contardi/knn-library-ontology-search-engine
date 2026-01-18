@@ -50,20 +50,37 @@
 {% if message %}
 <div class="message">
     <p>{{ message }}</p>
+    {% if suggestions %}
+    <div class="suggestions">
+        <p><strong>Did you mean:</strong></p>
+        <ul class="suggestion-list">
+            {% for suggestion in suggestions %}
+            <li>
+                <a href="{{ url_for('search', q=suggestion) }}">{{ suggestion }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% else %}
     <p><a href="{{ url_for('index') }}">Return to search</a></p>
+    {% endif %}
 </div>
 {% endif %}
 
 {% if results %}
 <div class="results-count">
+    {% if pagination and pagination.total_count %}
+    <p>Found <strong>{{ pagination.total_count }}</strong> book(s){% if pagination.total_pages > 1 %} (showing page {{ pagination.page }} of {{ pagination.total_pages }}){% endif %}</p>
+    {% else %}
     <p>Found <strong>{{ results | length }}</strong> book(s)</p>
+    {% endif %}
 </div>
 
 <div class="results-grid">
     {% for book in results %}
     <div class="book-card">
         <div class="book-header">
-            <h3 class="book-title">{{ book.title }}</h3>
+            <h3 class="book-title">{{ book.title_highlighted|default(book.title)|safe }}</h3>
             <span class="book-status status-{{ book.status | lower | replace(' ', '-') }}">
                 {{ book.status }}
             </span>
@@ -71,7 +88,7 @@
 
         <div class="book-meta">
             <p class="book-author">
-                <strong>Author:</strong> {{ book.author }}
+                <strong>Author:</strong> {{ book.author_highlighted|default(book.author)|safe }}
             </p>
             {% if book.year %}
             <p class="book-year">
@@ -92,12 +109,33 @@
 
         {% if book.description %}
         <div class="book-description">
-            <p>{{ book.description[:200] }}{% if book.description | length > 200 %}...{% endif %}</p>
+            {% set desc = book.description_highlighted|default(book.description) %}
+            <p>{{ desc[:200]|safe }}{% if desc | length > 200 %}...{% endif %}</p>
         </div>
         {% endif %}
     </div>
     {% endfor %}
 </div>
+
+{% if pagination and pagination.total_pages > 1 %}
+<div class="pagination">
+    {% if pagination.has_prev %}
+    <a href="{{ url_for('search', q=query, page=pagination.page - 1) }}" class="pagination-link pagination-prev">&laquo; Previous</a>
+    {% else %}
+    <span class="pagination-link pagination-prev disabled">&laquo; Previous</span>
+    {% endif %}
+
+    <span class="pagination-info">
+        Page {{ pagination.page }} of {{ pagination.total_pages }}
+    </span>
+
+    {% if pagination.has_next %}
+    <a href="{{ url_for('search', q=query, page=pagination.page + 1) }}" class="pagination-link pagination-next">Next &raquo;</a>
+    {% else %}
+    <span class="pagination-link pagination-next disabled">Next &raquo;</span>
+    {% endif %}
+</div>
+{% endif %}
 {% endif %}
 
 <div class="back-link">

@@ -68,6 +68,12 @@ def search():
     """Search books using natural language or filters."""
     graph = get_graph()
     query = request.args.get("q", "").strip()
+    page = request.args.get("page", 1, type=int)
+    per_page = request.args.get("per_page", 12, type=int)
+
+    # Ensure valid pagination values
+    page = max(1, page)
+    per_page = min(max(1, per_page), 50)  # Limit per_page to 50
 
     if not query:
         return render_template(
@@ -75,20 +81,26 @@ def search():
             query="",
             results=[],
             params={},
+            pagination=None,
+            suggestions=[],
             message="Please enter a search query.",
         )
 
-    results, params = search_books(graph, query)
+    search_result = search_books(graph, query, page=page, per_page=per_page)
 
     message = None
-    if not results:
+    if not search_result["results"] and not search_result["suggestions"]:
         message = "No books found matching your search criteria."
+    elif not search_result["results"] and search_result["suggestions"]:
+        message = "No exact matches found."
 
     return render_template(
         "results.html",
         query=query,
-        results=results,
-        params=params,
+        results=search_result["results"],
+        params=search_result["params"],
+        pagination=search_result["pagination"],
+        suggestions=search_result["suggestions"],
         message=message,
     )
 
@@ -104,6 +116,8 @@ def browse_genre(genre):
         query=f"Genre: {genre}",
         results=results,
         params={"genre": genre},
+        pagination=None,
+        suggestions=[],
         message=None if results else f"No books found in the {genre} genre.",
     )
 
@@ -128,6 +142,8 @@ def browse_age(age_group):
         query=f"Age Group: {age_display}",
         results=results,
         params={"age_group": age_group},
+        pagination=None,
+        suggestions=[],
         message=None if results else f"No books found for {age_display}.",
     )
 
@@ -143,6 +159,8 @@ def browse_all():
         query="All Books",
         results=results,
         params={},
+        pagination=None,
+        suggestions=[],
         message=None if results else "No books found in the library.",
     )
 
@@ -152,17 +170,21 @@ def api_search():
     """API endpoint for search (returns JSON)."""
     graph = get_graph()
     query = request.args.get("q", "").strip()
+    page = request.args.get("page", 1, type=int)
+    per_page = request.args.get("per_page", 12, type=int)
 
     if not query:
         return jsonify({"error": "No query provided", "results": []})
 
-    results, params = search_books(graph, query)
+    search_result = search_books(graph, query, page=page, per_page=per_page)
 
     return jsonify({
         "query": query,
-        "params": params,
-        "count": len(results),
-        "results": results,
+        "params": search_result["params"],
+        "count": search_result["pagination"]["total_count"],
+        "results": search_result["results"],
+        "pagination": search_result["pagination"],
+        "suggestions": search_result["suggestions"],
     })
 
 
