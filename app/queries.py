@@ -152,6 +152,11 @@ def parse_natural_language_query(query: str) -> dict:
         elif "non-fiction" in query_lower or "nonfiction" in query_lower:
             result["category"] = "non-fiction"
 
+    # If no specific parameters found, use entire query as title search
+    if not any([result["genre"], result["age_group"], result["author"],
+                result["category"], result["status"]]):
+        result["title_keywords"] = query.strip()
+
     return result
 
 
@@ -211,6 +216,11 @@ def build_sparql_query(params: dict) -> str:
     # Add status filter
     if params.get("status"):
         where_clauses.append(f"?book lib:hasStatus lib:{params['status']} .")
+
+    # Add title keyword filter
+    if params.get("title_keywords"):
+        title_search = params["title_keywords"].replace("'", "\\'")
+        filters.append(f"FILTER(CONTAINS(LCASE(?title), LCASE('{title_search}')))")
 
     # Build the query
     query = f"""
