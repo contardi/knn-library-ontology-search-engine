@@ -10,11 +10,29 @@ A semantic web-based library search engine that uses OWL ontologies and SPARQL q
 
 ## Features
 
+### Semantic Search
 - **Natural Language Search**: Search for books using everyday language (e.g., "fantasy books for 8 year olds")
 - **Age-Appropriate Filtering**: Find books suitable for specific age groups (Early Childhood, Children, Middle Grade, Young Adult, Adult)
 - **Genre Classification**: Browse books by fiction and non-fiction genres
 - **OWL Ontology**: Well-structured ontology with class hierarchies, object properties, and data properties
 - **SPARQL Queries**: Powerful semantic queries leveraging RDF triples
+
+### Fallback Text Search
+When semantic queries don't match structured parameters (genre, age, author), the system automatically falls back to a text-based search:
+
+- **Multi-Field Search**: Searches across title, description, and author fields simultaneously
+- **Stop Word Filtering**: Common words (the, a, for, with, etc.) are filtered out for better accuracy
+- **Relevance Scoring**: Results are ranked by relevance with weighted scoring:
+  - Title exact match: highest priority
+  - Title contains term: high priority
+  - Author match: medium priority
+  - Description match: lower priority
+
+### Smart Suggestions
+- **Fuzzy Matching**: When no results are found, suggests similar titles and authors using string similarity algorithms
+- **Match Highlighting**: Search terms are highlighted in results for easy identification
+
+### API
 - **REST API**: JSON endpoints for programmatic access
 
 ## Prerequisites
@@ -88,6 +106,7 @@ The home page displays library statistics and provides:
 
 Try these natural language searches:
 
+#### Semantic Queries (structured parameters)
 | Query | Description |
 |-------|-------------|
 | `fantasy books for children` | Fantasy genre suitable for ages 6-8 |
@@ -96,6 +115,15 @@ Try these natural language searches:
 | `books by Stephen King` | Books by a specific author |
 | `available thriller books` | Thriller books currently available |
 | `young adult romance` | Romance books for teens (13-17) |
+
+#### Fallback Text Search (when no structured match)
+| Query | Description |
+|-------|-------------|
+| `Harry Potter` | Searches title, description, and author for "Harry Potter" |
+| `dragons and magic` | Finds books mentioning dragons or magic |
+| `Rowling` | Finds books by author name |
+| `wizards` | Searches all text fields for the term |
+
 
 ## Ontology Details
 
