@@ -5,7 +5,14 @@
 {% block content %}
 <div class="results-header">
     <h1>Search Results</h1>
-    <p class="query-display">Query: <strong>{{ query }}</strong></p>
+    <p class="query-display">
+        Query: <strong>{{ query }}</strong>
+        {% if search_mode == 'semantic' %}
+        <span class="search-mode-badge semantic">AI-Enhanced</span>
+        {% else %}
+        <span class="search-mode-badge text">Text Search</span>
+        {% endif %}
+    </p>
 
     {% if params %}
     <div class="parsed-params">
@@ -78,12 +85,17 @@
 
 <div class="results-grid">
     {% for book in results %}
-    <div class="book-card">
+    <div class="book-card genre-{{ book.genre | lower | replace(' ', '-') if book.genre else 'unknown' }}" data-book-uri="{{ book.uri }}" onclick="openBookModal(this)">
         <div class="book-header">
             <h3 class="book-title">{{ book.title_highlighted|default(book.title)|safe }}</h3>
-            <span class="book-status status-{{ book.status | lower | replace(' ', '-') }}">
-                {{ book.status }}
-            </span>
+            <div class="book-badges">
+                {% if book._match_percentage is defined and book._match_percentage > 0 %}
+                <span class="match-badge" title="Relevance score">{{ book._match_percentage }}%</span>
+                {% endif %}
+                <span class="book-status status-{{ book.status | lower | replace(' ', '-') }}">
+                    {{ book.status }}
+                </span>
+            </div>
         </div>
 
         <div class="book-meta">
@@ -97,7 +109,7 @@
             {% endif %}
             {% if book.genre %}
             <p class="book-genre">
-                <strong>Genre:</strong> {{ book.genre }}
+                <span class="genre-tag genre-{{ book.genre | lower | replace(' ', '-') }}">{{ book.genre }}</span>
             </p>
             {% endif %}
             {% if book.age_group %}
@@ -113,6 +125,10 @@
             <p>{{ desc[:200]|safe }}{% if desc | length > 200 %}...{% endif %}</p>
         </div>
         {% endif %}
+
+        <div class="book-card-footer">
+            <span class="view-details">Click for details</span>
+        </div>
     </div>
     {% endfor %}
 </div>
@@ -136,9 +152,118 @@
     {% endif %}
 </div>
 {% endif %}
+
+{% if recommendations %}
+<div class="recommendations-section">
+    <h2>You Might Also Like</h2>
+    <div class="recommendations-grid">
+        {% for book in recommendations %}
+        <div class="recommendation-card genre-{{ book.genre | lower | replace(' ', '-') if book.genre else 'unknown' }}">
+            <h4 class="rec-title">{{ book.title }}</h4>
+            <p class="rec-author">by {{ book.author }}</p>
+            {% if book.genre %}
+            <span class="genre-tag small genre-{{ book.genre | lower | replace(' ', '-') }}">{{ book.genre }}</span>
+            {% endif %}
+            {% if book.similarity_score %}
+            <span class="similarity-score">{{ book.similarity_score }}% similar</span>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
 {% endif %}
 
 <div class="back-link">
     <a href="{{ url_for('index') }}">&larr; Back to Search</a>
 </div>
+
+<!-- Book Detail Modal -->
+<div id="bookModal" class="modal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeBookModal()">&times;</button>
+        <div class="modal-header">
+            <h2 id="modalTitle">Book Title</h2>
+            <span id="modalStatus" class="book-status">Available</span>
+        </div>
+        <div class="modal-body">
+            <div class="modal-meta">
+                <p><strong>Author:</strong> <span id="modalAuthor">Unknown</span></p>
+                <p><strong>Year:</strong> <span id="modalYear">-</span></p>
+                <p><strong>Genre:</strong> <span id="modalGenre">-</span></p>
+                <p><strong>Age Group:</strong> <span id="modalAgeGroup">-</span></p>
+                {% if search_mode == 'semantic' %}
+                <p><strong>Match Score:</strong> <span id="modalScore">-</span></p>
+                {% endif %}
+            </div>
+            <div class="modal-description">
+                <h3>Description</h3>
+                <p id="modalDescription">No description available.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Store book data for modal
+const bookData = {
+    {% for book in results %}
+    "{{ book.uri }}": {
+        title: "{{ book.title | e }}",
+        author: "{{ book.author | e }}",
+        year: "{{ book.year or '-' }}",
+        genre: "{{ book.genre | e }}",
+        ageGroup: "{{ book.age_group | e }}",
+        status: "{{ book.status | e }}",
+        description: "{{ book.description | e }}",
+        matchScore: "{{ book._match_percentage | default(0) }}"
+    },
+    {% endfor %}
+};
+
+function openBookModal(cardElement) {
+    const uri = cardElement.dataset.bookUri;
+    const book = bookData[uri];
+
+    if (!book) return;
+
+    document.getElementById('modalTitle').textContent = book.title;
+    document.getElementById('modalAuthor').textContent = book.author;
+    document.getElementById('modalYear').textContent = book.year;
+    document.getElementById('modalGenre').textContent = book.genre || '-';
+    document.getElementById('modalAgeGroup').textContent = book.ageGroup || '-';
+    document.getElementById('modalDescription').textContent = book.description || 'No description available.';
+
+    const statusEl = document.getElementById('modalStatus');
+    statusEl.textContent = book.status;
+    statusEl.className = 'book-status status-' + book.status.toLowerCase().replace(' ', '-');
+
+    const scoreEl = document.getElementById('modalScore');
+    if (scoreEl && book.matchScore > 0) {
+        scoreEl.textContent = book.matchScore + '%';
+    }
+
+    document.getElementById('bookModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeBookModal() {
+    document.getElementById('bookModal').classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function closeModal(event) {
+    if (event.target.id === 'bookModal') {
+        closeBookModal();
+    }
+}
+
+// Close modal on Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeBookModal();
+    }
+});
+</script>
 {% endblock %}

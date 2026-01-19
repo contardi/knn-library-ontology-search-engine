@@ -1,13 +1,37 @@
 """
 SPARQL query functions and natural language parser for the Library Search Engine.
+Enhanced with semantic search, TF-IDF scoring, and improved fuzzy matching.
 """
 
 import re
 from difflib import SequenceMatcher
+from typing import Optional
 from rdflib import Graph, Namespace
 from rdflib.plugins.sparql import prepareQuery
 
+# Import rapidfuzz for better fuzzy matching
+try:
+    from rapidfuzz import fuzz
+    from rapidfuzz.distance import Levenshtein
+    RAPIDFUZZ_AVAILABLE = True
+except ImportError:
+    RAPIDFUZZ_AVAILABLE = False
+    print("Warning: rapidfuzz not available, using basic fuzzy matching")
+
+# Import sklearn for TF-IDF (optional enhancement)
+try:
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    SKLEARN_AVAILABLE = True
+except ImportError:
+    SKLEARN_AVAILABLE = False
+    print("Warning: sklearn not available, TF-IDF features disabled")
+
 LIB = Namespace("http://example.org/library#")
+
+# Global TF-IDF vectorizer (initialized lazily)
+_tfidf_vectorizer: Optional['TfidfVectorizer'] = None
+_tfidf_matrix = None
+_tfidf_book_uris: list[str] = []
 
 # Stop words to ignore in searches
 STOP_WORDS = {
@@ -57,20 +81,83 @@ def calculate_relevance_score(book: dict, query_terms: list[str]) -> int:
     return score
 
 
-def find_similar(query: str, candidates: list[str], threshold: float = 0.5) -> list[tuple[str, float]]:
+def find_similar(query: str, candidates: list[str], threshold: float = 0.4) -> list[tuple[str, float]]:
     """
-    Find similar strings to the query using fuzzy matching.
+    Find similar strings to the query using enhanced fuzzy matching.
+    Uses rapidfuzz for better typo tolerance with multiple matching strategies:
+    - Levenshtein distance (edit distance)
+    - Partial ratio (substring matching)
+    - Token set ratio (word-order independent)
+
     Returns list of (candidate, similarity_ratio) tuples sorted by similarity.
     """
     matches = []
-    query_lower = query.lower()
+    query_lower = query.lower().strip()
+
+    # Adjust threshold for short queries (more lenient)
+    adjusted_threshold = threshold
+    if len(query_lower) <= 6:
+        adjusted_threshold = 0.3  # More lenient for short queries like "Odissey"
 
     for candidate in candidates:
-        ratio = SequenceMatcher(None, query_lower, candidate.lower()).ratio()
-        if ratio >= threshold:
-            matches.append((candidate, ratio))
+        candidate_lower = candidate.lower()
 
-    return sorted(matches, key=lambda x: x[1], reverse=True)[:5]
+        if RAPIDFUZZ_AVAILABLE:
+            # Use multiple matching strategies and take the best
+            scores = []
+
+            # 1. Simple ratio (similar to SequenceMatcher)
+            simple_ratio = fuzz.ratio(query_lower, candidate_lower) / 100.0
+            scores.append(simple_ratio)
+
+            # 2. Partial ratio (good for substring matches)
+            partial_ratio = fuzz.partial_ratio(query_lower, candidate_lower) / 100.0
+            scores.append(partial_ratio * 0.9)  # Slight penalty for partial
+
+            # 3. Token set ratio (word-order independent)
+            token_ratio = fuzz.token_set_ratio(query_lower, candidate_lower) / 100.0
+            scores.append(token_ratio * 0.95)
+
+            # 4. Levenshtein-based similarity
+            max_len = max(len(query_lower), len(candidate_lower))
+            if max_len > 0:
+                edit_distance = Levenshtein.distance(query_lower, candidate_lower)
+                levenshtein_ratio = 1 - (edit_distance / max_len)
+                scores.append(levenshtein_ratio)
+
+            best_score = max(scores)
+        else:
+            # Fallback to SequenceMatcher
+            best_score = SequenceMatcher(None, query_lower, candidate_lower).ratio()
+
+        if best_score >= adjusted_threshold:
+            matches.append((candidate, best_score))
+
+    # Sort by score and return top matches
+    return sorted(matches, key=lambda x: x[1], reverse=True)[:8]
+
+
+def phonetic_match(word1: str, word2: str) -> bool:
+    """
+    Simple phonetic matching for common spelling variations.
+    Handles cases like 'ph' vs 'f', double letters, etc.
+    """
+    # Normalize both words
+    def normalize(w):
+        w = w.lower()
+        # Common phonetic substitutions
+        w = w.replace('ph', 'f')
+        w = w.replace('ck', 'k')
+        w = w.replace('ee', 'e')
+        w = w.replace('oo', 'o')
+        w = w.replace('ss', 's')
+        w = w.replace('tt', 't')
+        w = w.replace('ll', 'l')
+        # Remove duplicate consonants
+        w = re.sub(r'(.)\1+', r'\1', w)
+        return w
+
+    return normalize(word1) == normalize(word2)
 
 
 def highlight_matches(text: str, terms: list[str]) -> str:
@@ -107,6 +194,140 @@ def get_all_titles_and_authors(g: Graph) -> tuple[list[str], list[str]]:
     authors = [str(row.authorName) for row in g.query(authors_query)]
 
     return titles, authors
+
+def initialize_tfidf(books: list[dict]) -> None:
+    """Initialize TF-IDF vectorizer with book corpus."""
+    global _tfidf_vectorizer, _tfidf_matrix, _tfidf_book_uris
+
+    if not SKLEARN_AVAILABLE or _tfidf_vectorizer is not None:
+        return
+
+    # Build corpus from books
+    corpus = []
+    _tfidf_book_uris = []
+
+    for book in books:
+        text_parts = []
+        if book.get('title'):
+            text_parts.append(book['title'])
+        if book.get('author'):
+            text_parts.append(book['author'])
+        if book.get('genre'):
+            text_parts.append(book['genre'])
+        if book.get('description'):
+            text_parts.append(book['description'])
+
+        combined = ' '.join(text_parts)
+        corpus.append(combined)
+        _tfidf_book_uris.append(book.get('uri', ''))
+
+    if corpus:
+        _tfidf_vectorizer = TfidfVectorizer(
+            lowercase=True,
+            stop_words='english',
+            max_features=5000,
+            ngram_range=(1, 2)  # Include bigrams
+        )
+        _tfidf_matrix = _tfidf_vectorizer.fit_transform(corpus)
+        print(f"TF-IDF initialized with {len(corpus)} documents")
+
+
+def get_tfidf_scores(query: str, book_uris: list[str]) -> dict[str, float]:
+    """
+    Get TF-IDF similarity scores for books matching a query.
+
+    Args:
+        query: Search query text
+        book_uris: List of book URIs to score
+
+    Returns:
+        Dict mapping book URI to TF-IDF score
+    """
+    global _tfidf_vectorizer, _tfidf_matrix, _tfidf_book_uris
+
+    if not SKLEARN_AVAILABLE or _tfidf_vectorizer is None or _tfidf_matrix is None:
+        return {}
+
+    try:
+        # Transform query
+        query_vec = _tfidf_vectorizer.transform([query])
+
+        # Compute cosine similarity with all documents
+        from sklearn.metrics.pairwise import cosine_similarity
+        similarities = cosine_similarity(query_vec, _tfidf_matrix).flatten()
+
+        # Map to book URIs
+        uri_to_score = {}
+        for i, uri in enumerate(_tfidf_book_uris):
+            if uri in book_uris:
+                uri_to_score[uri] = float(similarities[i])
+
+        return uri_to_score
+    except Exception as e:
+        print(f"TF-IDF scoring error: {e}")
+        return {}
+
+
+def calculate_combined_score(
+    book: dict,
+    query_terms: list[str],
+    query_text: str,
+    semantic_scores: dict[str, float],
+    tfidf_scores: dict[str, float]
+) -> tuple[float, dict]:
+    """
+    Calculate a combined relevance score using multiple signals.
+
+    Returns:
+        Tuple of (final_score, score_breakdown)
+    """
+    uri = book.get('uri', '')
+
+    # Word-based score (existing method)
+    word_score = calculate_relevance_score(book, query_terms)
+    # Normalize to 0-1 range (max possible is ~200 for exact title + author + description)
+    word_score_normalized = min(word_score / 150.0, 1.0)
+
+    # Semantic score (from embeddings)
+    semantic_score = semantic_scores.get(uri, 0.0)
+
+    # TF-IDF score
+    tfidf_score = tfidf_scores.get(uri, 0.0)
+
+    # Combine scores with weights
+    # If we have semantic scores, weight them more heavily
+    if semantic_scores:
+        final_score = (
+            0.35 * word_score_normalized +
+            0.45 * semantic_score +
+            0.20 * tfidf_score
+        )
+    else:
+        # Fallback when semantic search is not available
+        final_score = (
+            0.70 * word_score_normalized +
+            0.30 * tfidf_score
+        )
+
+    # Bonus for exact title match
+    title_lower = book.get('title', '').lower()
+    query_lower = query_text.lower()
+    if query_lower in title_lower or title_lower in query_lower:
+        final_score += 0.15
+
+    # Cap at 1.0
+    final_score = min(final_score, 1.0)
+
+    # Score breakdown for debugging/display
+    breakdown = {
+        'word': round(word_score_normalized * 100, 1),
+        'semantic': round(semantic_score * 100, 1),
+        'tfidf': round(tfidf_score * 100, 1),
+        'final': round(final_score * 100, 1)
+    }
+
+    return final_score, breakdown
+
 
 # Genre mappings for natural language parsing
 FICTION_GENRES = [
@@ -367,10 +588,17 @@ def build_sparql_query(params: dict) -> str:
     return query
 
 
-def search_books(g: Graph, query_text: str, page: int = 1, per_page: int = 12) -> dict:
+def search_books(g: Graph, query_text: str, page: int = 1, per_page: int = 12, use_semantic: bool = True) -> dict:
     """
-    Search books using natural language query.
-    Returns a dict with results, pagination info, and suggestions.
+    Search books using natural language query with optional semantic enhancement.
+    Returns a dict with results, pagination info, suggestions, and search metadata.
+
+    Args:
+        g: RDF graph
+        query_text: Natural language search query
+        page: Page number for pagination
+        per_page: Results per page
+        use_semantic: Whether to use semantic search (embeddings)
     """
     params = parse_natural_language_query(query_text)
     sparql_query = build_sparql_query(params)
@@ -381,7 +609,8 @@ def search_books(g: Graph, query_text: str, page: int = 1, per_page: int = 12) -
         # Fall back to the original query if no tokens after filtering
         query_terms = [query_text.strip()]
 
-    results = []
+    # Execute SPARQL query to get initial results
+    sparql_results = []
     for row in g.query(sparql_query):
         book = {
             "uri": str(row.book),
@@ -393,11 +622,50 @@ def search_books(g: Graph, query_text: str, page: int = 1, per_page: int = 12) -
             "description": str(row.description) if row.description else "",
             "status": str(row.status) if row.status else "Unknown",
         }
-        # Calculate relevance score
-        book["_score"] = calculate_relevance_score(book, query_terms)
+        sparql_results.append(book)
+
+    # Get semantic search results if enabled and query looks semantic
+    semantic_scores: dict[str, float] = {}
+    search_mode = "text"  # Track which search mode was used
+
+    if use_semantic and params.get("title_keywords"):
+        try:
+            from app.embeddings import get_embeddings_service
+
+            embeddings_service = get_embeddings_service()
+            if embeddings_service.initialized:
+                semantic_results = embeddings_service.semantic_search(query_text, top_k=100)
+                semantic_scores = dict(semantic_results)
+                search_mode = "semantic" if semantic_scores else "text"
+
+                # If SPARQL returned no results but semantic search found matches,
+                # fetch those books from the graph
+                if not sparql_results and semantic_scores:
+                    all_books = get_all_books(g, limit=200)
+                    semantic_uris = set(semantic_scores.keys())
+                    sparql_results = [b for b in all_books if b.get('uri') in semantic_uris]
+
+        except ImportError:
+            pass  # Embeddings not available
+        except Exception as e:
+            print(f"Semantic search error: {e}")
+
+    # Get TF-IDF scores
+    book_uris = [b.get('uri', '') for b in sparql_results]
+    tfidf_scores = get_tfidf_scores(query_text, book_uris)
+
+    # Calculate combined scores
+    results = []
+    for book in sparql_results:
+        score, breakdown = calculate_combined_score(
+            book, query_terms, query_text, semantic_scores, tfidf_scores
+        )
+        book["_score"] = score
+        book["_score_breakdown"] = breakdown
+        book["_match_percentage"] = int(breakdown['final'])
         results.append(book)
 
-    # Sort by relevance score (descending), then by title
+    # Sort by combined score (descending), then by title
     results.sort(key=lambda x: (-x["_score"], x["title"]))
 
     # Generate suggestions if no results found
@@ -407,7 +675,7 @@ def search_books(g: Graph, query_text: str, page: int = 1, per_page: int = 12) -
         all_candidates = titles + authors
 
         # Find similar matches for the query
-        similar_matches = find_similar(query_text, all_candidates, threshold=0.4)
+        similar_matches = find_similar(query_text, all_candidates, threshold=0.35)
         suggestions = [match[0] for match in similar_matches]
 
     # Calculate pagination
@@ -428,6 +696,7 @@ def search_books(g: Graph, query_text: str, page: int = 1, per_page: int = 12) -
         "params": params,
         "query_terms": query_terms,
         "suggestions": suggestions,
+        "search_mode": search_mode,
         "pagination": {
             "page": page,
             "per_page": per_page,
@@ -567,3 +836,65 @@ def get_statistics(g: Graph) -> dict:
         stats["available_books"] = int(row.availableCount)
 
     return stats
+
+
+def initialize_ai_services(g: Graph) -> None:
+    """
+    Initialize all AI services (embeddings, recommendations, TF-IDF).
+    Should be called once when the application starts.
+    """
+    print("Initializing AI services...")
+
+    # Get all books for initialization
+    all_books = get_all_books(g, limit=200)
+
+    # Initialize TF-IDF
+    initialize_tfidf(all_books)
+
+    # Initialize embeddings service
+    try:
+        from app.embeddings import get_embeddings_service
+        embeddings_service = get_embeddings_service()
+        embeddings_service.initialize(all_books)
+    except ImportError as e:
+        print(f"Embeddings service not available: {e}")
+    except Exception as e:
+        print(f"Error initializing embeddings: {e}")
+
+    # Initialize recommendation service
+    try:
+        from app.recommendations import get_recommendation_service
+        recommendation_service = get_recommendation_service()
+        recommendation_service.initialize(g, all_books)
+    except ImportError as e:
+        print(f"Recommendation service not available: {e}")
+    except Exception as e:
+        print(f"Error initializing recommendations: {e}")
+
+    print("AI services initialized")
+
+
+def get_similar_books_for_result(book_uri: str, limit: int = 5) -> list[dict]:
+    """
+    Get similar books for a given book URI.
+    Used to display "You might also like" recommendations.
+    """
+    try:
+        from app.recommendations import get_recommendation_service
+        recommendation_service = get_recommendation_service()
+        return recommendation_service.get_similar_books(book_uri, limit)
+    except Exception:
+        return []
+
+
+def get_recommendations_for_results(results: list[dict], limit: int = 6) -> list[dict]:
+    """
+    Get recommendations based on search results.
+    Returns books similar to the top search results.
+    """
+    try:
+        from app.recommendations import get_recommendation_service
+        recommendation_service = get_recommendation_service()
+        return recommendation_service.get_recommendations_for_query(results, limit)
+    except Exception:
+        return []

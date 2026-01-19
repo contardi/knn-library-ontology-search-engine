@@ -12,6 +12,8 @@ from app.queries import (
     get_books_by_genre,
     get_books_by_age_group,
     get_statistics,
+    initialize_ai_services,
+    get_recommendations_for_results,
     GENRE_NORMALIZATION,
     AGE_GROUPS,
 )
@@ -28,12 +30,14 @@ g = None
 
 
 def get_graph():
-    """Load and cache the RDF graph."""
+    """Load and cache the RDF graph, initialize AI services."""
     global g
     if g is None:
         g = Graph()
         g.parse(ONTOLOGY_PATH, format="turtle")
         print(f"Loaded ontology with {len(g)} triples")
+        # Initialize AI services (embeddings, recommendations, TF-IDF)
+        initialize_ai_services(g)
     return g
 
 
@@ -94,6 +98,11 @@ def search():
     elif not search_result["results"] and search_result["suggestions"]:
         message = "No exact matches found."
 
+    # Get recommendations based on search results
+    recommendations = []
+    if search_result["results"]:
+        recommendations = get_recommendations_for_results(search_result["results"], limit=6)
+
     return render_template(
         "results.html",
         query=query,
@@ -101,6 +110,8 @@ def search():
         params=search_result["params"],
         pagination=search_result["pagination"],
         suggestions=search_result["suggestions"],
+        recommendations=recommendations,
+        search_mode=search_result.get("search_mode", "text"),
         message=message,
     )
 

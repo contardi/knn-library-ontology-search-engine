@@ -5,3 +5,7 @@ __pycache__/
 .DS_Store
 .idea/
 .vscode/
+
+# AI model cache files
+data/embeddings_cache.npz
+*.npy
