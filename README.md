@@ -1,6 +1,6 @@
 # Library Ontology Search Engine
 
-A semantic web-based library search engine that uses OWL ontologies and SPARQL queries to enable natural language book searches with age-appropriate filtering.
+A semantic web-based library search engine that uses OWL ontologies and SPARQL queries to enable natural language book searches with age-appropriate filtering and AI-enhanced semantic similarity.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/)
@@ -17,20 +17,16 @@ A semantic web-based library search engine that uses OWL ontologies and SPARQL q
 - **OWL Ontology**: Well-structured ontology with class hierarchies, object properties, and data properties
 - **SPARQL Queries**: Powerful semantic queries leveraging RDF triples
 
-### Fallback Text Search
-When semantic queries don't match structured parameters (genre, age, author), the system automatically falls back to a text-based search:
-
-- **Multi-Field Search**: Searches across title, description, and author fields simultaneously
-- **Stop Word Filtering**: Common words (the, a, for, with, etc.) are filtered out for better accuracy
-- **Relevance Scoring**: Results are ranked by relevance with weighted scoring:
-  - Title exact match: highest priority
-  - Title contains term: high priority
-  - Author match: medium priority
-  - Description match: lower priority
+### AI-Enhanced Search
+- **Semantic Similarity**: Uses sentence-transformers to find conceptually related books (e.g., "young wizard learns magic" finds Harry Potter)
+- **Hybrid Scoring**: Combines word matching, semantic embeddings, and TF-IDF for relevance ranking
+- **Typo Tolerance**: Improved fuzzy matching with Levenshtein distance
+- **Book Recommendations**: "You Might Also Like" suggestions based on content similarity
 
 ### Smart Suggestions
 - **Fuzzy Matching**: When no results are found, suggests similar titles and authors using string similarity algorithms
 - **Match Highlighting**: Search terms are highlighted in results for easy identification
+- **Relevance Indicators**: Match percentage badges show search relevance scores
 
 ### API
 - **REST API**: JSON endpoints for programmatic access
@@ -70,6 +66,8 @@ protege/
 │   ├── __init__.py
 │   ├── app.py              # Flask application
 │   ├── queries.py          # SPARQL queries and NL parser
+│   ├── embeddings.py       # Semantic embedding service
+│   ├── recommendations.py  # Book recommendations
 │   ├── static/
 │   │   └── style.css       # Stylesheet
 │   └── templates/
@@ -116,13 +114,15 @@ Try these natural language searches:
 | `available thriller books` | Thriller books currently available |
 | `young adult romance` | Romance books for teens (13-17) |
 
-#### Fallback Text Search (when no structured match)
+#### AI-Enhanced Search (when no structured match)
 | Query | Description |
 |-------|-------------|
 | `Harry Potter` | Searches title, description, and author for "Harry Potter" |
 | `dragons and magic` | Finds books mentioning dragons or magic |
 | `Rowling` | Finds books by author name |
 | `wizards` | Searches all text fields for the term |
+| `young wizard learns magic` | Semantic match finds Harry Potter, Wizard of Earthsea |
+| `space adventure for kids` | Combines semantic similarity + age filtering |
 
 
 ## Ontology Details
@@ -214,6 +214,7 @@ The `images/` folder contains documentation screenshots:
 | [`06-query-examples-02.png`](/images/06-query-examples-02.png) | SPARQL query examples (part 2) |
 | [`07-web-app-home-page.png`](/images/07-web-app-home-page.png) | Web Page Home Page Example |
 | [`08-web-app-search-result-page.png`](/images/08-web-app-search-result-page.png) | Web Page Search Result Page |
+| [`09-web-app-ai-enhanced-result-page.png`](/images/09-web-app-ai-enhanced-result-page.png) | AI-Enhanced Search Results with Recommendations |
 
 
 ## Demo
